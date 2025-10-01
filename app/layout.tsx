@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -94,8 +96,8 @@ const schemaData = {
     },
     {
       "@type": "Service",
-      "name": "Couples Massage",
-      "description": "Two therapists, one unforgettable experience in your home or hotel.",
+      "name": "Back-to-Back Couples Massage",
+      "description": "One therapist provides sequential massages for both partners in your home or hotel.",
       "areaServed": "South Florida from Delray Beach to Miami"
     },
     {
@@ -118,7 +120,7 @@ const schemaData = {
         "@type": "Person",
         "name": "Emily R."
       },
-      "datePublished": "2025-07-10",
+      "datePublished": "2024-07-10",
       "reviewBody": "Absolutely amazing experience! Felt like a luxury spa came to my home. Highly recommend their couples massage.",
       "reviewRating": {
         "@type": "Rating",
@@ -132,7 +134,7 @@ const schemaData = {
         "@type": "Person",
         "name": "David L."
       },
-      "datePublished": "2025-08-14",
+      "datePublished": "2024-08-14",
       "reviewBody": "Professional, on-time, and the best deep tissue massage I've had outside a resort. Worth every penny.",
       "reviewRating": {
         "@type": "Rating",
@@ -157,9 +159,18 @@ export default function RootLayout({
         />
       </head>
       <body>
+        {/* Skip to main content link for accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-gold-500 focus:text-white focus:rounded-md focus:shadow-lg"
+        >
+          Skip to main content
+        </a>
         <Header />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
+        <BackToTop />
+        <Analytics />
       </body>
     </html>
   );

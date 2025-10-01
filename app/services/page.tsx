@@ -4,15 +4,16 @@ import CTAButton from '@/components/CTAButton';
 
 export const metadata: Metadata = {
   title: 'In-Home Massage Services | Luxury Mobile Spa Treatments',
-  description: 'Explore Swedish, Deep Tissue, Couples, and Hot Stone massage. Book your private in-home spa experience today in South Florida.',
-  keywords: 'Swedish massage at home, deep tissue massage near me, couples massage at home, hot stone massage service',
+  description: 'Explore Swedish, Deep Tissue, Back-to-Back Couples, and Hot Stone massage. Book your private in-home spa experience today in South Florida.',
+  keywords: 'Swedish massage at home, deep tissue massage near me, back to back couples massage, sequential couples massage at home, hot stone massage service',
 };
 
 export default function ServicesPage() {
   const services = [
     {
       title: 'Swedish Massage',
-      duration: '60 / 90 minutes',
+      duration: '60 / 90 / 120 minutes',
+      pricing: '$XXX / $XXX / $XXX',
       description: 'Experience the classic relaxation massage with gentle, flowing strokes designed to release tension and restore balance. Perfect for stress relief and improving circulation.',
       benefits: [
         'Reduces stress and anxiety',
@@ -25,7 +26,8 @@ export default function ServicesPage() {
     },
     {
       title: 'Deep Tissue Massage',
-      duration: '60 / 90 minutes',
+      duration: '60 / 90 / 120 minutes',
+      pricing: '$XXX / $XXX / $XXX',
       description: 'Targeted therapy using firm pressure to reach deeper muscle layers. Ideal for athletes, chronic pain sufferers, or anyone with persistent muscle tension and knots.',
       benefits: [
         'Relieves chronic muscle pain',
@@ -37,21 +39,23 @@ export default function ServicesPage() {
       imageAlt: 'Deep Tissue Massage',
     },
     {
-      title: 'Couples Massage',
-      duration: '60 / 90 minutes',
-      description: 'Share the luxury spa experience with someone special. Two therapists work simultaneously in the comfort of your home or hotel suite. Perfect for anniversaries, celebrations, or simply unwinding together.',
+      title: 'Back-to-Back Couples Massage',
+      duration: '120 min / 180 min (for both partners)',
+      pricing: '$XXX / $XXX (total for both)',
+      description: 'Share the luxury spa experience with someone special. One skilled therapist provides consecutive massage sessions for both partners in the comfort of your home or hotel. Each person receives individual attention and a fully customized massage. Perfect for anniversaries, celebrations, or romantic relaxation.',
       benefits: [
-        'Shared relaxation experience',
-        'Romantic and intimate',
+        'Personalized attention for each partner',
+        'Romantic shared experience',
         'Perfect for special occasions',
-        'Customized for each person',
+        'More affordable than dual-therapist sessions',
       ],
       imageSrc: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80',
-      imageAlt: 'Couples Massage Experience',
+      imageAlt: 'Back-to-Back Couples Massage Experience',
     },
     {
       title: 'Hot Stone Massage',
-      duration: '75 / 90 minutes',
+      duration: '75 / 90 / 120 minutes',
+      pricing: '$XXX / $XXX / $XXX',
       description: 'Smooth, heated basalt stones are placed on key points and used as massage tools to melt away tension. The therapeutic heat penetrates deep into muscles for profound relaxation.',
       benefits: [
         'Deep muscle relaxation',
@@ -64,7 +68,8 @@ export default function ServicesPage() {
     },
     {
       title: 'Prenatal Massage',
-      duration: '60 minutes',
+      duration: '60 / 90 minutes',
+      pricing: '$XXX / $XXX',
       description: 'Specially designed for expectant mothers, our prenatal massage eases pregnancy-related discomfort with safe, nurturing techniques. Our therapists are trained in prenatal care.',
       benefits: [
         'Reduces pregnancy discomfort',
@@ -77,7 +82,8 @@ export default function ServicesPage() {
     },
     {
       title: 'Sports Massage',
-      duration: '60 / 90 minutes',
+      duration: '60 / 90 / 120 minutes',
+      pricing: '$XXX / $XXX / $XXX',
       description: 'Performance-focused therapy designed for athletes before or after events. Combines stretching, compression, and targeted work to enhance performance and speed recovery.',
       benefits: [
         'Prevents injuries',
@@ -128,14 +134,23 @@ export default function ServicesPage() {
                       alt={service.imageAlt}
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      loading="lazy"
                     />
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="w-full lg:w-1/2">
-                  <div className="inline-block px-4 py-1 bg-gold-100 text-gold-600 text-sm font-medium rounded-full mb-4">
-                    {service.duration}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="inline-block px-4 py-1 bg-gold-100 text-gold-600 text-sm font-medium rounded-full">
+                      {service.duration}
+                    </div>
+                    {service.pricing && (
+                      <div className="inline-block px-4 py-1 bg-terracotta-100 text-terracotta-600 text-sm font-medium rounded-full">
+                        {service.pricing}
+                      </div>
+                    )}
                   </div>
                   <h2 className="text-4xl font-serif font-bold text-charcoal-900 mb-4">
                     {service.title}

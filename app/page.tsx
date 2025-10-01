@@ -18,10 +18,10 @@ export default function Home() {
       imageAlt: 'Deep Tissue Massage',
     },
     {
-      title: 'Couples Massage',
-      description: 'Romantic dual therapy at home or hotel. Share the experience with someone special.',
+      title: 'Back-to-Back Couples Massage',
+      description: 'Sequential massages for two. Share the experience with someone special in the comfort of your home.',
       imageSrc: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80',
-      imageAlt: 'Couples Massage',
+      imageAlt: 'Back-to-Back Couples Massage',
     },
     {
       title: 'Hot Stone',

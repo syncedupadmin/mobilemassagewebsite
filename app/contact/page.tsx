@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import BookingCalendar from '@/components/BookingCalendar';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Book Your Mobile Massage | Contact [Your Brand]',
@@ -27,9 +28,26 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Booking Calendar Section */}
+      {/* Contact Form Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      {/* Booking Calendar Section */}
+      <section className="py-12 bg-cream-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-serif font-bold text-charcoal-900 mb-4">
+              Or Book Directly
+            </h2>
+            <p className="text-lg text-charcoal-900/70">
+              Use our online booking system to schedule your appointment
+            </p>
+          </div>
           <div className="max-w-5xl mx-auto">
             <BookingCalendar />
           </div>

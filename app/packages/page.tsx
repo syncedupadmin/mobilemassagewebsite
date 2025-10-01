@@ -5,7 +5,7 @@ import CTAButton from '@/components/CTAButton';
 export const metadata: Metadata = {
   title: 'Luxury Massage Packages | Exclusive In-Home Spa Experiences',
   description: 'Discover curated massage bundles designed for romance, stress relief, and recovery. Luxury massage packages at home in South Florida.',
-  keywords: 'luxury massage packages, couples massage at home, athlete recovery massage, executive stress relief',
+  keywords: 'luxury massage packages, back to back couples massage at home, sequential couples massage, athlete recovery massage, executive stress relief',
 };
 
 export default function PackagesPage() {
@@ -31,11 +31,11 @@ export default function PackagesPage() {
     {
       name: 'Couples Retreat',
       tagline: 'Romance & Relaxation',
-      duration: '90 minutes per person',
+      duration: '180 minutes total (90 min per person)',
       price: 'Romantic Package',
-      description: 'An unforgettable shared spa experience in the intimacy of your home or hotel. Two therapists work simultaneously to create a synchronized journey of relaxation.',
+      description: 'An unforgettable shared spa experience in the intimacy of your home or hotel. One skilled therapist provides consecutive massage sessions for both partners, creating a romantic journey of relaxation.',
       includes: [
-        'Side-by-side Swedish or deep tissue massage',
+        'Back-to-back Swedish or deep tissue massage (90 min each)',
         'Rose petal aromatherapy',
         'Champagne and chocolate pairing',
         'Candlelit ambiance setup',
@@ -43,7 +43,7 @@ export default function PackagesPage() {
       ],
       idealFor: 'Couples, anniversaries, special celebrations',
       imageSrc: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80',
-      imageAlt: 'Couples massage retreat',
+      imageAlt: 'Back-to-back couples massage retreat',
       accentColor: 'terracotta',
     },
     {
