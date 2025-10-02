@@ -20,6 +20,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://mobilemassagewebsite.vercel.app'),
   title: "Luxury Mobile Massage at Home | Ivory & Stone",
   description: "Spa-quality massage in the comfort of your home, hotel, or office. Certified therapists, premium oils, and luxury treatments delivered to you in South Florida.",
   keywords: "luxury mobile massage, in-home massage South Florida, spa at home, mobile massage Delray to Miami",
@@ -27,6 +28,24 @@ export const metadata: Metadata = {
     title: "Luxury Mobile Massage at Home | Ivory & Stone",
     description: "Spa-quality massage in the comfort of your home, hotel, or office.",
     type: "website",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 1200,
+        height: 1200,
+        alt: "Ivory & Stone Mobile Massage Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Luxury Mobile Massage at Home | Ivory & Stone",
+    description: "Spa-quality massage in the comfort of your home, hotel, or office.",
+    images: ["/images/logo.png"],
+  },
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
   },
 };
 
