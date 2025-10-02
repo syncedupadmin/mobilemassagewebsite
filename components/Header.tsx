@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 export default function Header() {
@@ -49,8 +50,15 @@ export default function Header() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="text-2xl font-serif font-bold text-charcoal-900">
-              <span className="text-gold-400">[Your</span> Brand]
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/logo.png"
+                alt="Ivory & Stone Mobile Massage"
+                width={180}
+                height={60}
+                priority
+                className="h-12 w-auto"
+              />
             </Link>
 
             {/* Desktop Navigation */}

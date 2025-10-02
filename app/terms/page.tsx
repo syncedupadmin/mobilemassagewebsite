@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | [Your Brand]',
-  description: 'Terms of service for [Your Brand] mobile massage services.',
+  title: 'Terms of Service | Ivory & Stone',
+  description: 'Terms of service for Ivory & Stone mobile massage services.',
 };
 
 export default function TermsPage() {

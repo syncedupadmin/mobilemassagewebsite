@@ -4,7 +4,7 @@ import CTAButton from '@/components/CTAButton';
 
 export const metadata: Metadata = {
   title: 'About Us | Luxury Mobile Massage Specialists',
-  description: 'Learn more about [Your Brand], certified therapists delivering high-end spa experiences directly to you in South Florida.',
+  description: 'Learn more about Ivory & Stone, certified therapists delivering high-end spa experiences directly to you in South Florida.',
   keywords: 'professional mobile spa, certified massage therapists, luxury massage service',
 };
 

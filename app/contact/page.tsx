@@ -3,7 +3,7 @@ import BookingCalendar from '@/components/BookingCalendar';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Book Your Mobile Massage | Contact [Your Brand]',
+  title: 'Book Your Mobile Massage | Contact Ivory & Stone',
   description: 'Schedule your luxury massage today. Fill out our quick form or call us to bring the spa to your door in South Florida.',
   keywords: 'book in-home massage, mobile massage appointments, massage service near me',
 };

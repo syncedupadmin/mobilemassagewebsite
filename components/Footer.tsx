@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-serif font-bold text-gold-400 mb-4">
-              [Your Brand]
+              Ivory & Stone
             </h3>
             <p className="text-sm text-cream-100/80 mb-4">
               Luxury mobile massage services bringing spa-quality relaxation to your home, hotel, or office throughout South Florida.
@@ -109,7 +109,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-cream-100/20 mt-8 pt-8 text-center text-sm text-cream-100/60">
-          <p>&copy; {new Date().getFullYear()} [Your Brand]. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Ivory & Stone Mobile Massage. All rights reserved.</p>
         </div>
       </div>
     </footer>

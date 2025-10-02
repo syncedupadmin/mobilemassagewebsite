@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | [Your Brand]',
-  description: 'Privacy policy for [Your Brand] mobile massage services.',
+  title: 'Privacy Policy | Ivory & Stone',
+  description: 'Privacy policy for Ivory & Stone mobile massage services.',
 };
 
 export default function PrivacyPage() {

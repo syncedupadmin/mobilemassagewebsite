@@ -20,11 +20,11 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Luxury Mobile Massage at Home | [Your Brand]",
+  title: "Luxury Mobile Massage at Home | Ivory & Stone",
   description: "Spa-quality massage in the comfort of your home, hotel, or office. Certified therapists, premium oils, and luxury treatments delivered to you in South Florida.",
   keywords: "luxury mobile massage, in-home massage South Florida, spa at home, mobile massage Delray to Miami",
   openGraph: {
-    title: "Luxury Mobile Massage at Home | [Your Brand]",
+    title: "Luxury Mobile Massage at Home | Ivory & Stone",
     description: "Spa-quality massage in the comfort of your home, hotel, or office.",
     type: "website",
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "[Your Brand Name]",
+  "name": "Ivory & Stone Mobile Massage",
   "image": "https://yourdomain.com/logo.png",
   "@id": "",
   "url": "https://www.yourdomain.com",
