@@ -54,10 +54,12 @@ export default function Header() {
               <Image
                 src="/images/logo.png"
                 alt="Ivory & Stone Mobile Massage"
-                width={180}
-                height={60}
+                width={240}
+                height={240}
                 priority
-                className="h-12 w-auto"
+                className={`w-auto transition-all duration-300 ${
+                  isScrolled ? 'h-14 md:h-16' : 'h-16 md:h-20'
+                }`}
               />
             </Link>
 
