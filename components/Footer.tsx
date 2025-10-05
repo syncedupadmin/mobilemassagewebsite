@@ -2,61 +2,51 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-gold-500/20 text-gold-100 py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-black border-t border-charcoal-light text-cream py-16">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-serif font-bold text-gold-400 mb-4">
+            <h3 className="text-xl font-serif font-medium text-gold-300 mb-4 tracking-wide">
               Destiny Eden
             </h3>
-            <p className="text-sm text-gold-200 mb-4">
-              Luxury mobile massage services bringing spa-quality relaxation to your home, hotel, or office throughout South Florida.
+            <p className="text-sm text-cream/70 mb-4 leading-relaxed">
+              Luxury mobile massage bringing spa-quality relaxation to South Florida
             </p>
-            <p className="text-sm text-gold-200">
-              <strong>Service Area:</strong> Delray Beach to Miami
+            <p className="text-sm text-cream/60">
+              Delray Beach to Miami
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-serif font-semibold mb-4 text-gold-400">
-              Quick Links
+            <h4 className="text-base font-serif font-medium mb-4 text-gold-300 tracking-wide">
+              Navigate
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-sm hover:text-gold-400 transition-colors">
+                <Link href="/" className="text-sm text-cream/70 hover:text-gold-300 transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-sm hover:text-gold-400 transition-colors">
+                <Link href="/services" className="text-sm text-cream/70 hover:text-gold-300 transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/packages" className="text-sm hover:text-gold-400 transition-colors">
+                <Link href="/packages" className="text-sm text-cream/70 hover:text-gold-300 transition-colors">
                   Packages
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-sm hover:text-gold-400 transition-colors">
-                  About Us
+                <Link href="/about" className="text-sm text-cream/70 hover:text-gold-300 transition-colors">
+                  About
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm hover:text-gold-400 transition-colors">
+                <Link href="/contact" className="text-sm text-cream/70 hover:text-gold-300 transition-colors">
                   Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="text-sm hover:text-gold-400 transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-sm hover:text-gold-400 transition-colors">
-                  Terms of Service
                 </Link>
               </li>
             </ul>
@@ -64,27 +54,27 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-serif font-semibold mb-4 text-gold-400">
-              Contact
+            <h4 className="text-base font-serif font-medium mb-4 text-gold-300 tracking-wide">
+              Connect
             </h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-3 text-sm">
               <li>
-                <a href="tel:+15615551234" className="hover:text-gold-400 transition-colors">
+                <a href="tel:+15615551234" className="text-cream/70 hover:text-gold-300 transition-colors">
                   (561) 555-1234
                 </a>
               </li>
               <li>
-                <a href="mailto:info@yourbrand.com" className="hover:text-gold-400 transition-colors">
+                <a href="mailto:info@yourbrand.com" className="text-cream/70 hover:text-gold-300 transition-colors">
                   info@yourbrand.com
                 </a>
               </li>
               <li className="pt-4">
-                <div className="flex space-x-4">
+                <div className="flex gap-5">
                   <a
                     href="https://facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-gold-400 transition-colors"
+                    className="text-cream/70 hover:text-gold-300 transition-colors"
                     aria-label="Facebook"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -95,7 +85,7 @@ export default function Footer() {
                     href="https://instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-gold-400 transition-colors"
+                    className="text-cream/70 hover:text-gold-300 transition-colors"
                     aria-label="Instagram"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -108,8 +98,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gold-500/20 mt-8 pt-8 text-center text-sm text-gold-300">
-          <p>&copy; {new Date().getFullYear()} Destiny Eden Mobile Massage. All rights reserved.</p>
+        <div className="border-t border-charcoal-light mt-12 pt-8 text-center text-sm text-cream/50">
+          <p>&copy; {new Date().getFullYear()} Destiny Eden. All rights reserved.</p>
         </div>
       </div>
     </footer>

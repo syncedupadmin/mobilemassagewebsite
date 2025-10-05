@@ -58,124 +58,109 @@ export default function Home() {
             src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1920&q=80"
             alt="Luxury massage therapy"
             fill
-            className="object-cover opacity-40"
+            className="object-cover opacity-30"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/80" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
 
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 animate-fade-in">
-            Luxury Massage, <br />
-            <span className="bg-gold-gradient bg-clip-text text-transparent">Delivered to Your Door</span>
+        <div className="relative z-10 text-center px-6 sm:px-8 lg:px-12 max-w-6xl mx-auto">
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-serif font-light text-cream mb-8 animate-fade-in tracking-wide">
+            Luxury Massage<br />
+            <span className="text-gold-300 font-normal">At Your Door</span>
           </h1>
-          <p className="text-xl sm:text-2xl text-gold-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Spa-quality relaxation with certified therapists and premium oils—all without leaving home.
+          <p className="text-lg sm:text-xl text-cream/80 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Certified therapists. Premium oils. Your sanctuary.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <CTAButton href="/contact" variant="primary">
-              Book Your Escape
+              Reserve
             </CTAButton>
             <CTAButton href="/services" variant="outline">
-              Explore Services
+              Services
             </CTAButton>
           </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <svg
-            className="w-6 h-6 text-gold-400"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
         </div>
       </section>
 
       {/* Services Preview Section */}
-      <section className="py-20 bg-black-light">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">
-              Our Signature Services
+      <section className="py-32 bg-charcoal">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-serif font-light text-cream mb-6 tracking-wide">
+              Signature Services
             </h2>
-            <p className="text-lg text-gold-200 max-w-2xl mx-auto">
-              Discover our curated selection of luxury massage treatments, each designed to transport you to a state of pure relaxation.
+            <p className="text-base text-cream/70 max-w-xl mx-auto">
+              Curated treatments designed for complete relaxation
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
             {services.map((service, index) => (
               <ServiceCard key={index} {...service} />
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <CTAButton href="/services" variant="primary">
-              View All Services
+          <div className="text-center mt-16">
+            <CTAButton href="/services" variant="secondary">
+              All Services
             </CTAButton>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-black">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">
-              The Destiny Eden Difference
+      <section className="py-32 bg-black">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-serif font-light text-cream mb-6 tracking-wide">
+              Our Approach
             </h2>
-            <p className="text-lg text-gold-200 max-w-2xl mx-auto">
-              Experience the pinnacle of luxury and convenience with our mobile spa service.
+            <p className="text-base text-cream/70 max-w-xl mx-auto">
+              Luxury and convenience, delivered with care
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-500/20 border-2 border-gold-500 mb-6">
-                <svg className="w-8 h-8 text-gold-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-12 h-12 mx-auto mb-6 text-gold-300">
+                <svg fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
-              <h3 className="text-2xl font-serif font-semibold text-white mb-3">
+              <h3 className="text-xl font-serif font-medium text-cream mb-4 tracking-wide">
                 Certified Therapists
               </h3>
-              <p className="text-gold-200">
-                All our therapists are licensed, insured, and bring years of professional spa experience.
+              <p className="text-cream/70 text-sm leading-relaxed">
+                Licensed professionals with years of spa experience
               </p>
             </div>
 
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-500/20 border-2 border-gold-500 mb-6">
-                <svg className="w-8 h-8 text-gold-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-12 h-12 mx-auto mb-6 text-gold-300">
+                <svg fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
                 </svg>
               </div>
-              <h3 className="text-2xl font-serif font-semibold text-white mb-3">
+              <h3 className="text-xl font-serif font-medium text-cream mb-4 tracking-wide">
                 Premium Products
               </h3>
-              <p className="text-gold-200">
-                We use only the finest organic oils, hot stones, and luxury linens for your comfort.
+              <p className="text-cream/70 text-sm leading-relaxed">
+                Organic oils and luxury linens for complete comfort
               </p>
             </div>
 
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-500/20 border-2 border-gold-500 mb-6">
-                <svg className="w-8 h-8 text-gold-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-12 h-12 mx-auto mb-6 text-gold-300">
+                <svg fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
                 </svg>
               </div>
-              <h3 className="text-2xl font-serif font-semibold text-white mb-3">
-                Your Sanctuary
+              <h3 className="text-xl font-serif font-medium text-cream mb-4 tracking-wide">
+                Your Space
               </h3>
-              <p className="text-gold-200">
-                Enjoy luxury spa treatments in the privacy and comfort of your home, hotel, or office.
+              <p className="text-cream/70 text-sm leading-relaxed">
+                Home, hotel, or office—wherever you're most comfortable
               </p>
             </div>
           </div>
@@ -183,18 +168,18 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-black-light">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">
-              What Our Clients Say
+      <section className="py-32 bg-black-light">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-serif font-light text-cream mb-6 tracking-wide">
+              Client Experience
             </h2>
-            <p className="text-lg text-gold-200 max-w-2xl mx-auto">
-              Don't just take our word for it—hear from those who've experienced the luxury.
+            <p className="text-base text-cream/70 max-w-xl mx-auto">
+              Trusted by discerning clients across South Florida
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-1 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard key={index} {...testimonial} />
             ))}
@@ -203,16 +188,16 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-gold-gradient text-black">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-serif font-bold mb-6">
-            Ready to Relax?
+      <section className="py-32 bg-charcoal">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 text-center">
+          <h2 className="text-4xl sm:text-5xl font-serif font-light text-cream mb-8 tracking-wide">
+            Experience Destiny Eden
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Book your luxury massage experience today and discover why South Florida trusts us for in-home relaxation.
+          <p className="text-base text-cream/70 mb-12 max-w-lg mx-auto">
+            Serving South Florida from Delray Beach to Miami
           </p>
-          <CTAButton href="/contact" variant="outline" className="bg-black text-gold-400 hover:bg-black-light border-black hover:border-black-light">
-            Schedule Now
+          <CTAButton href="/contact" variant="primary">
+            Book Now
           </CTAButton>
         </div>
       </section>

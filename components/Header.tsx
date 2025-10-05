@@ -39,101 +39,90 @@ export default function Header() {
   ];
 
   return (
-    <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-black/95 backdrop-blur-md shadow-lg shadow-gold-500/10 py-4'
-            : 'bg-gradient-to-b from-black/60 to-transparent py-6'
-        }`}
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/images/destiny-eden-logo.png"
-                alt="Destiny Eden Mobile Massage"
-                width={240}
-                height={240}
-                priority
-                className={`w-auto transition-all duration-300 ${
-                  isScrolled ? 'h-14 md:h-16' : 'h-16 md:h-20'
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-black/98 backdrop-blur-sm border-b border-charcoal-light py-3'
+          : 'bg-gradient-to-b from-black/70 to-transparent py-5'
+      }`}
+    >
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/destiny-eden-logo.png"
+              alt="Destiny Eden Mobile Massage"
+              width={240}
+              height={240}
+              priority
+              className={`w-auto transition-all duration-300 ${
+                isScrolled ? 'h-12 md:h-14' : 'h-14 md:h-16'
+              }`}
+            />
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-10">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium tracking-wide transition-colors hover:text-gold-300 ${
+                  pathname === link.href ? 'text-gold-300' : 'text-cream'
                 }`}
-              />
-            </Link>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-gold-400 ${
-                    pathname === link.href ? 'text-gold-400' : 'text-white'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 focus:ring-offset-black rounded-md p-1"
-              aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
-              aria-expanded={isMobileMenuOpen}
-              aria-controls="mobile-menu"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
               >
-                {isMobileMenuOpen ? (
-                  <path d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-          </div>
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden text-cream focus:outline-none focus:ring-1 focus:ring-gold-300 p-1"
+            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {isMobileMenuOpen ? (
+                <path d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
         </div>
+      </div>
 
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div id="mobile-menu" className="md:hidden bg-black border-t border-gold-400/20 mt-4">
-            <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4" aria-label="Mobile navigation">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-base font-medium transition-colors hover:text-gold-400 ${
-                    pathname === link.href ? 'text-gold-400' : 'text-white'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        )}
-      </header>
-
-      {/* Sticky Mobile CTA Button */}
-      <Link
-        href="/contact"
-        className="md:hidden fixed bottom-6 right-6 z-50 bg-gold-gradient text-black px-6 py-3 rounded-full shadow-lg shadow-gold-400/50 hover:shadow-gold-400/70 hover:scale-105 transition-all duration-300 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 focus:ring-offset-black"
-        aria-label="Book a massage appointment"
-      >
-        Book Now
-      </Link>
-    </>
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div id="mobile-menu" className="md:hidden bg-black/98 border-t border-charcoal-light mt-3">
+          <nav className="container mx-auto px-6 py-6 flex flex-col space-y-5" aria-label="Mobile navigation">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`text-base font-medium tracking-wide transition-colors hover:text-gold-300 ${
+                  pathname === link.href ? 'text-gold-300' : 'text-cream'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
+    </header>
   );
 }

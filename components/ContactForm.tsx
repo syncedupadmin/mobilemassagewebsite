@@ -67,9 +67,9 @@ export default function ContactForm() {
   ];
 
   return (
-    <div className="bg-black border border-gold-500/20 rounded-lg shadow-lg shadow-gold-500/10 p-8">
-      <h2 className="text-3xl font-serif font-bold text-white mb-6 text-center">
-        Contact Us
+    <div className="bg-charcoal border border-charcoal-light p-10">
+      <h2 className="text-3xl font-serif font-light text-cream mb-8 text-center tracking-wide">
+        Get in Touch
       </h2>
 
       {isSubmitted && (
@@ -121,8 +121,8 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         {/* Name Field */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gold-200 mb-2">
-            Name <span className="text-gold-400">*</span>
+          <label htmlFor="name" className="block text-sm font-medium text-cream/80 mb-2 tracking-wide">
+            Name <span className="text-gold-300">*</span>
           </label>
           <input
             type="text"
@@ -134,8 +134,8 @@ export default function ContactForm() {
                 message: 'Name must be at least 2 characters',
               },
             })}
-            className={`w-full px-4 py-3 bg-black-light border rounded-md text-white placeholder-gold-300/50 focus:outline-none focus:ring-2 focus:ring-gold-400 transition-colors ${
-              errors.name ? 'border-red-500' : 'border-gold-500/30'
+            className={`w-full px-4 py-3 bg-black border text-cream placeholder-cream/30 focus:outline-none focus:ring-1 focus:ring-gold-300 transition-colors ${
+              errors.name ? 'border-red-500' : 'border-charcoal-light'
             }`}
             placeholder="Your full name"
           />
@@ -146,8 +146,8 @@ export default function ContactForm() {
 
         {/* Email Field */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gold-200 mb-2">
-            Email <span className="text-gold-400">*</span>
+          <label htmlFor="email" className="block text-sm font-medium text-cream/80 mb-2 tracking-wide">
+            Email <span className="text-gold-300">*</span>
           </label>
           <input
             type="email"
@@ -159,8 +159,8 @@ export default function ContactForm() {
                 message: 'Invalid email address',
               },
             })}
-            className={`w-full px-4 py-3 bg-black-light border rounded-md text-white placeholder-gold-300/50 focus:outline-none focus:ring-2 focus:ring-gold-400 transition-colors ${
-              errors.email ? 'border-red-500' : 'border-gold-500/30'
+            className={`w-full px-4 py-3 bg-black border text-cream placeholder-cream/30 focus:outline-none focus:ring-1 focus:ring-gold-300 transition-colors ${
+              errors.email ? 'border-red-500' : 'border-charcoal-light'
             }`}
             placeholder="your@email.com"
           />
@@ -171,8 +171,8 @@ export default function ContactForm() {
 
         {/* Phone Field */}
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gold-200 mb-2">
-            Phone <span className="text-gold-400">*</span>
+          <label htmlFor="phone" className="block text-sm font-medium text-cream/80 mb-2 tracking-wide">
+            Phone <span className="text-gold-300">*</span>
           </label>
           <input
             type="tel"
@@ -188,8 +188,8 @@ export default function ContactForm() {
                 message: 'Phone number must be at least 10 digits',
               },
             })}
-            className={`w-full px-4 py-3 bg-black-light border rounded-md text-white placeholder-gold-300/50 focus:outline-none focus:ring-2 focus:ring-gold-400 transition-colors ${
-              errors.phone ? 'border-red-500' : 'border-gold-500/30'
+            className={`w-full px-4 py-3 bg-black border text-cream placeholder-cream/30 focus:outline-none focus:ring-1 focus:ring-gold-300 transition-colors ${
+              errors.phone ? 'border-red-500' : 'border-charcoal-light'
             }`}
             placeholder="(561) 555-1234"
           />
@@ -200,14 +200,14 @@ export default function ContactForm() {
 
         {/* Service Interest Dropdown */}
         <div>
-          <label htmlFor="service" className="block text-sm font-medium text-gold-200 mb-2">
-            Service Interest <span className="text-gold-400">*</span>
+          <label htmlFor="service" className="block text-sm font-medium text-cream/80 mb-2 tracking-wide">
+            Service Interest <span className="text-gold-300">*</span>
           </label>
           <select
             id="service"
             {...register('service', { required: 'Please select a service' })}
-            className={`w-full px-4 py-3 bg-black-light border rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gold-400 transition-colors ${
-              errors.service ? 'border-red-500' : 'border-gold-500/30'
+            className={`w-full px-4 py-3 bg-black border text-cream focus:outline-none focus:ring-1 focus:ring-gold-300 transition-colors ${
+              errors.service ? 'border-red-500' : 'border-charcoal-light'
             }`}
           >
             <option value="">Select a service...</option>
@@ -227,7 +227,7 @@ export default function ContactForm() {
           <div>
             <label
               htmlFor="preferredDate"
-              className="block text-sm font-medium text-gold-200 mb-2"
+              className="block text-sm font-medium text-cream/80 mb-2 tracking-wide"
             >
               Preferred Date
             </label>
@@ -235,20 +235,20 @@ export default function ContactForm() {
               type="date"
               id="preferredDate"
               {...register('preferredDate')}
-              className="w-full px-4 py-3 bg-black-light border border-gold-500/30 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gold-400 transition-colors"
+              className="w-full px-4 py-3 bg-black border border-charcoal-light text-cream focus:outline-none focus:ring-1 focus:ring-gold-300 transition-colors"
             />
           </div>
           <div>
             <label
               htmlFor="preferredTime"
-              className="block text-sm font-medium text-gold-200 mb-2"
+              className="block text-sm font-medium text-cream/80 mb-2 tracking-wide"
             >
               Preferred Time
             </label>
             <select
               id="preferredTime"
               {...register('preferredTime')}
-              className="w-full px-4 py-3 bg-black-light border border-gold-500/30 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gold-400 transition-colors"
+              className="w-full px-4 py-3 bg-black border border-charcoal-light text-cream focus:outline-none focus:ring-1 focus:ring-gold-300 transition-colors"
             >
               <option value="">Select time...</option>
               <option value="morning">Morning (8am - 12pm)</option>
@@ -260,14 +260,14 @@ export default function ContactForm() {
 
         {/* Message Field */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gold-200 mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-cream/80 mb-2 tracking-wide">
             Message
           </label>
           <textarea
             id="message"
             {...register('message')}
             rows={4}
-            className="w-full px-4 py-3 bg-black-light border border-gold-500/30 rounded-md text-white placeholder-gold-300/50 focus:outline-none focus:ring-2 focus:ring-gold-400 transition-colors resize-none"
+            className="w-full px-4 py-3 bg-black border border-charcoal-light text-cream placeholder-cream/30 focus:outline-none focus:ring-1 focus:ring-gold-300 transition-colors resize-none"
             placeholder="Tell us more about what you're looking for..."
           />
         </div>
@@ -276,10 +276,10 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`w-full bg-gold-gradient text-black px-8 py-4 rounded-md font-semibold transition-all duration-300 ${
+          className={`w-full bg-gold-300 text-black px-10 py-4 font-medium tracking-wide transition-all duration-300 ${
             isSubmitting
               ? 'opacity-50 cursor-not-allowed'
-              : 'shadow-lg shadow-gold-500/50 hover:shadow-xl hover:shadow-gold-500/70 hover:scale-105'
+              : 'hover:bg-gold-400 shadow-sm hover:shadow-md'
           }`}
         >
           {isSubmitting ? (
@@ -311,8 +311,8 @@ export default function ContactForm() {
           )}
         </button>
 
-        <p className="text-sm text-center text-gold-300">
-          <span className="text-gold-400">*</span> Required fields
+        <p className="text-sm text-center text-cream/60">
+          <span className="text-gold-300">*</span> Required fields
         </p>
       </form>
     </div>

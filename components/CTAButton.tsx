@@ -13,12 +13,12 @@ export default function CTAButton({
   variant = 'primary',
   className = ''
 }: CTAButtonProps) {
-  const baseStyles = 'inline-block px-8 py-4 rounded-md font-semibold transition-all duration-300 text-center';
+  const baseStyles = 'inline-block px-10 py-4 font-medium transition-all duration-300 text-center tracking-wide';
 
   const variants = {
-    primary: 'bg-gold-gradient text-black shadow-lg shadow-gold-500/50 hover:shadow-xl hover:shadow-gold-500/70 hover:scale-105',
-    secondary: 'bg-gold-600 text-white hover:bg-gold-700 shadow-lg shadow-gold-500/30 hover:shadow-xl hover:shadow-gold-500/50',
-    outline: 'border-2 border-gold-400 text-gold-400 hover:bg-gold-400 hover:text-black',
+    primary: 'bg-gold-300 text-black hover:bg-gold-400 shadow-sm hover:shadow-md',
+    secondary: 'bg-charcoal text-cream border border-charcoal-light hover:bg-charcoal-light hover:border-gold-300',
+    outline: 'border border-gold-300 text-gold-300 hover:bg-gold-300/10',
   };
 
   return (
