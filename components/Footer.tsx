@@ -2,18 +2,18 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal-900 text-cream-100 py-12">
+    <footer className="bg-black border-t border-gold-500/20 text-gold-100 py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-serif font-bold text-gold-400 mb-4">
-              Ivory & Stone
+              Destiny Eden
             </h3>
-            <p className="text-sm text-cream-100/80 mb-4">
+            <p className="text-sm text-gold-200 mb-4">
               Luxury mobile massage services bringing spa-quality relaxation to your home, hotel, or office throughout South Florida.
             </p>
-            <p className="text-sm text-cream-100/80">
+            <p className="text-sm text-gold-200">
               <strong>Service Area:</strong> Delray Beach to Miami
             </p>
           </div>
@@ -108,8 +108,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-cream-100/20 mt-8 pt-8 text-center text-sm text-cream-100/60">
-          <p>&copy; {new Date().getFullYear()} Ivory & Stone Mobile Massage. All rights reserved.</p>
+        <div className="border-t border-gold-500/20 mt-8 pt-8 text-center text-sm text-gold-300">
+          <p>&copy; {new Date().getFullYear()} Destiny Eden Mobile Massage. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-cream-100 text-charcoal-900 font-sans;
+    @apply bg-black text-gold-100 font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -64,20 +64,20 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - luxurious gold on black */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #FAF9F6;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4AF37;
-  border-radius: 5px;
+  background: linear-gradient(135deg, #D4AF37 0%, #E6C84F 100%);
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C9A961;
+  background: linear-gradient(135deg, #E6C84F 0%, #FFD966 100%);
 }

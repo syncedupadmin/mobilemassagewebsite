@@ -72,24 +72,24 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-cream-50 to-cream-100">
+      <section className="relative pt-32 pb-20 bg-black-gradient">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl sm:text-6xl font-serif font-bold text-charcoal-900 mb-6">
+            <h1 className="text-5xl sm:text-6xl font-serif font-bold text-white mb-6">
               Where Luxury Meets Convenience
             </h1>
-            <p className="text-xl text-charcoal-900/70 leading-relaxed">
-              At <span className="text-gold-600 font-semibold">[Your Brand]</span>, we believe wellness should be effortless. Our certified therapists bring years of spa experience directly to your home, hotel, or office. Every detail—from premium oils to discreet service—creates your personal sanctuary.
+            <p className="text-xl text-gold-200 leading-relaxed">
+              At <span className="text-gold-400 font-semibold">Destiny Eden</span>, we believe wellness should be effortless. Our certified therapists bring years of spa experience directly to your home, hotel, or office. Every detail—from premium oils to discreet service—creates your personal sanctuary.
             </p>
           </div>
         </div>
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black-light">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 lg:h-[600px] rounded-lg overflow-hidden shadow-2xl">
+            <div className="relative h-96 lg:h-[600px] rounded-lg overflow-hidden shadow-2xl shadow-gold-500/20 border border-gold-500/20">
               <Image
                 src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80"
                 alt="Luxury massage therapy"
@@ -99,12 +99,12 @@ export default function AboutPage() {
             </div>
 
             <div>
-              <h2 className="text-4xl font-serif font-bold text-charcoal-900 mb-6">
+              <h2 className="text-4xl font-serif font-bold text-white mb-6">
                 Our Story
               </h2>
-              <div className="space-y-4 text-charcoal-900/80 leading-relaxed">
+              <div className="space-y-4 text-gold-200 leading-relaxed">
                 <p>
-                  Founded in 2020, [Your Brand] was born from a simple observation: the most successful people in South Florida were too busy to prioritize their wellness. They needed the luxury spa experience but couldn't spare the time for travel and waiting rooms.
+                  Founded in 2020, Destiny Eden was born from a simple observation: the most successful people in South Florida were too busy to prioritize their wellness. They needed the luxury spa experience but couldn't spare the time for travel and waiting rooms.
                 </p>
                 <p>
                   We assembled a team of elite therapists—professionals who'd worked at the region's most prestigious spas and resorts—and created a mobile service that delivers that same five-star experience wherever our clients are most comfortable.
@@ -112,7 +112,7 @@ export default function AboutPage() {
                 <p>
                   Today, we serve everyone from Fortune 500 executives to busy parents, professional athletes to couples celebrating anniversaries. What they all have in common is a desire for exceptional service, total convenience, and genuine results.
                 </p>
-                <p className="text-gold-600 font-semibold italic">
+                <p className="text-gold-400 font-semibold italic">
                   Your wellness journey shouldn't require compromise. We bring the sanctuary to you.
                 </p>
               </div>
@@ -122,27 +122,27 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-cream-50">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold text-charcoal-900 mb-4">
+            <h2 className="text-4xl font-serif font-bold text-white mb-4">
               Our Commitment to Excellence
             </h2>
-            <p className="text-lg text-charcoal-900/70 max-w-2xl mx-auto">
+            <p className="text-lg text-gold-200 max-w-2xl mx-auto">
               Three core principles guide everything we do
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {values.map((value, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-md">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-100 text-gold-600 mb-6">
+              <div key={index} className="bg-black-light border border-gold-500/20 p-8 rounded-lg shadow-lg shadow-gold-500/10">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-500/20 border-2 border-gold-500 text-gold-400 mb-6">
                   {value.icon}
                 </div>
-                <h3 className="text-2xl font-serif font-semibold text-charcoal-900 mb-3">
+                <h3 className="text-2xl font-serif font-semibold text-white mb-3">
                   {value.title}
                 </h3>
-                <p className="text-charcoal-900/70 leading-relaxed">
+                <p className="text-gold-200 leading-relaxed">
                   {value.description}
                 </p>
               </div>
@@ -152,36 +152,37 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black-light">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold text-charcoal-900 mb-4">
+            <h2 className="text-4xl font-serif font-bold text-white mb-4">
               Meet Our Therapists
             </h2>
-            <p className="text-lg text-charcoal-900/70 max-w-2xl mx-auto">
+            <p className="text-lg text-gold-200 max-w-2xl mx-auto">
               Licensed professionals with decades of combined experience
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-cream-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+              <div key={index} className="bg-black border border-gold-500/20 rounded-lg overflow-hidden shadow-lg shadow-gold-500/10 hover:shadow-xl hover:shadow-gold-500/20 transition-all duration-300">
                 <div className="relative h-80">
                   <Image
                     src={member.imageSrc}
                     alt={member.name}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-serif font-semibold text-charcoal-900 mb-1">
+                  <h3 className="text-xl font-serif font-semibold text-white mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-gold-600 font-medium mb-3">
+                  <p className="text-gold-400 font-medium mb-3">
                     {member.role}
                   </p>
-                  <p className="text-charcoal-900/70 text-sm leading-relaxed">
+                  <p className="text-gold-200 text-sm leading-relaxed">
                     {member.bio}
                   </p>
                 </div>
@@ -192,23 +193,23 @@ export default function AboutPage() {
       </section>
 
       {/* Certifications Section */}
-      <section className="py-20 bg-cream-50">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-serif font-bold text-charcoal-900 mb-4">
+              <h2 className="text-4xl font-serif font-bold text-white mb-4">
                 Certifications & Standards
               </h2>
-              <p className="text-lg text-charcoal-900/70">
+              <p className="text-lg text-gold-200">
                 Every therapist on our team meets the highest professional standards
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {certifications.map((cert, index) => (
-                <div key={index} className="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                <div key={index} className="flex items-center bg-black-light border border-gold-500/20 p-4 rounded-lg shadow-lg shadow-gold-500/10">
                   <svg
-                    className="w-6 h-6 text-gold-500 mr-4 flex-shrink-0"
+                    className="w-6 h-6 text-gold-400 mr-4 flex-shrink-0"
                     fill="none"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -218,7 +219,7 @@ export default function AboutPage() {
                   >
                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
-                  <span className="text-charcoal-900 font-medium">{cert}</span>
+                  <span className="text-white font-medium">{cert}</span>
                 </div>
               ))}
             </div>
@@ -227,20 +228,20 @@ export default function AboutPage() {
       </section>
 
       {/* Service Area Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black-light">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-serif font-bold text-charcoal-900 mb-6">
+            <h2 className="text-4xl font-serif font-bold text-white mb-6">
               Serving South Florida
             </h2>
-            <p className="text-xl text-charcoal-900/70 mb-8">
+            <p className="text-xl text-gold-200 mb-8">
               We proudly serve the entire South Florida region, from Delray Beach to Miami, bringing luxury massage experiences to homes, hotels, and offices throughout the area.
             </p>
-            <div className="bg-gradient-to-r from-gold-100 to-terracotta-100 p-8 rounded-lg mb-8">
-              <p className="text-lg font-semibold text-charcoal-900 mb-4">
+            <div className="bg-gold-gradient p-8 rounded-lg mb-8">
+              <p className="text-lg font-semibold text-black mb-4">
                 Service Area Includes:
               </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-charcoal-900/80">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-black font-medium">
                 <div>Delray Beach</div>
                 <div>Boca Raton</div>
                 <div>Fort Lauderdale</div>
@@ -251,7 +252,7 @@ export default function AboutPage() {
                 <div>Downtown Miami</div>
               </div>
             </div>
-            <p className="text-charcoal-900/70 mb-8">
+            <p className="text-gold-200 mb-8">
               Not sure if we serve your area? Contact us—we often accommodate special requests!
             </p>
             <CTAButton href="/contact" variant="primary">
@@ -262,7 +263,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-terracotta-500 to-terracotta-600 text-white">
+      <section className="py-20 bg-gold-gradient text-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-serif font-bold mb-6">
             Experience the Difference
@@ -273,7 +274,7 @@ export default function AboutPage() {
           <CTAButton
             href="/contact"
             variant="outline"
-            className="bg-white text-terracotta-600 hover:bg-cream-100 border-white"
+            className="bg-black text-gold-400 hover:bg-black-light border-black hover:border-black-light"
           >
             Schedule Now
           </CTAButton>

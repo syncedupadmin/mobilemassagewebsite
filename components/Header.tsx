@@ -43,8 +43,8 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-cream-100/95 backdrop-blur-md shadow-md py-4'
-            : 'bg-transparent py-6'
+            ? 'bg-black/95 backdrop-blur-md shadow-lg shadow-gold-500/10 py-4'
+            : 'bg-gradient-to-b from-black/60 to-transparent py-6'
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,8 +52,8 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/logo.png"
-                alt="Ivory & Stone Mobile Massage"
+                src="/images/destiny-eden-logo.png"
+                alt="Destiny Eden Mobile Massage"
                 width={240}
                 height={240}
                 priority
@@ -69,8 +69,8 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-gold-500 ${
-                    pathname === link.href ? 'text-gold-500' : 'text-charcoal-900'
+                  className={`text-sm font-medium transition-colors hover:text-gold-400 ${
+                    pathname === link.href ? 'text-gold-400' : 'text-white'
                   }`}
                 >
                   {link.label}
@@ -81,7 +81,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2 rounded-md p-1"
+              className="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 focus:ring-offset-black rounded-md p-1"
               aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-menu"
@@ -107,15 +107,15 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div id="mobile-menu" className="md:hidden bg-cream-100 border-t border-gold-400/20 mt-4">
+          <div id="mobile-menu" className="md:hidden bg-black border-t border-gold-400/20 mt-4">
             <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4" aria-label="Mobile navigation">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-base font-medium transition-colors hover:text-gold-500 ${
-                    pathname === link.href ? 'text-gold-500' : 'text-charcoal-900'
+                  className={`text-base font-medium transition-colors hover:text-gold-400 ${
+                    pathname === link.href ? 'text-gold-400' : 'text-white'
                   }`}
                 >
                   {link.label}
@@ -129,7 +129,7 @@ export default function Header() {
       {/* Sticky Mobile CTA Button */}
       <Link
         href="/contact"
-        className="md:hidden fixed bottom-6 right-6 z-50 bg-gold-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-gold-600 transition-all duration-300 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2"
+        className="md:hidden fixed bottom-6 right-6 z-50 bg-gold-gradient text-black px-6 py-3 rounded-full shadow-lg shadow-gold-400/50 hover:shadow-gold-400/70 hover:scale-105 transition-all duration-300 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 focus:ring-offset-black"
         aria-label="Book a massage appointment"
       >
         Book Now

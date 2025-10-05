@@ -87,13 +87,13 @@ export default function PackagesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-cream-50 to-cream-100">
+      <section className="relative pt-32 pb-20 bg-black-gradient">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl sm:text-6xl font-serif font-bold text-charcoal-900 mb-6">
+            <h1 className="text-5xl sm:text-6xl font-serif font-bold text-white mb-6">
               Luxury Packages for Every Occasion
             </h1>
-            <p className="text-xl text-charcoal-900/70 leading-relaxed mb-8">
+            <p className="text-xl text-gold-200 leading-relaxed mb-8">
               Curated massage experiences designed to deliver maximum relaxation, recovery, and rejuvenation. Each package includes premium enhancements for an unforgettable spa experience at home.
             </p>
           </div>
@@ -101,13 +101,13 @@ export default function PackagesPage() {
       </section>
 
       {/* Packages Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black-light">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {packages.map((pkg, index) => (
               <div
                 key={index}
-                className="group bg-cream-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+                className="group bg-black border border-gold-500/20 rounded-xl overflow-hidden shadow-lg shadow-gold-500/10 hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-500 transform hover:-translate-y-2"
               >
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden">
@@ -117,15 +117,15 @@ export default function PackagesPage() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
-                    <div className="inline-block px-3 py-1 bg-gold-500 text-white text-sm font-medium rounded-full mb-2">
+                    <div className="inline-block px-3 py-1 bg-gold-gradient text-black text-sm font-semibold rounded-full mb-2">
                       {pkg.duration}
                     </div>
                     <h2 className="text-3xl font-serif font-bold text-white">
                       {pkg.name}
                     </h2>
-                    <p className="text-gold-300 font-medium italic">
+                    <p className="text-gold-400 font-medium italic">
                       {pkg.tagline}
                     </p>
                   </div>
@@ -133,19 +133,19 @@ export default function PackagesPage() {
 
                 {/* Content */}
                 <div className="p-8">
-                  <p className="text-charcoal-900/80 mb-6 leading-relaxed">
+                  <p className="text-gold-200 mb-6 leading-relaxed">
                     {pkg.description}
                   </p>
 
                   <div className="mb-6">
-                    <h3 className="text-lg font-semibold text-charcoal-900 mb-3">
+                    <h3 className="text-lg font-semibold text-gold-400 mb-3">
                       Package Includes:
                     </h3>
                     <ul className="space-y-2">
                       {pkg.includes.map((item, i) => (
                         <li key={i} className="flex items-start">
                           <svg
-                            className="w-5 h-5 text-gold-500 mr-2 flex-shrink-0 mt-0.5"
+                            className="w-5 h-5 text-gold-400 mr-2 flex-shrink-0 mt-0.5"
                             fill="none"
                             strokeLinecap="round"
                             strokeLinejoin="round"
@@ -155,20 +155,20 @@ export default function PackagesPage() {
                           >
                             <path d="M5 13l4 4L19 7"></path>
                           </svg>
-                          <span className="text-charcoal-900/70 text-sm">{item}</span>
+                          <span className="text-gold-200 text-sm">{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="mb-6 p-4 bg-white rounded-lg">
-                    <p className="text-sm text-charcoal-900/60 mb-1">Ideal For:</p>
-                    <p className="text-charcoal-900 font-medium">{pkg.idealFor}</p>
+                  <div className="mb-6 p-4 bg-black-light border border-gold-500/20 rounded-lg">
+                    <p className="text-sm text-gold-300 mb-1">Ideal For:</p>
+                    <p className="text-white font-medium">{pkg.idealFor}</p>
                   </div>
 
                   <CTAButton
                     href="/contact"
-                    variant={pkg.accentColor === 'gold' ? 'primary' : 'secondary'}
+                    variant="primary"
                     className="w-full"
                   >
                     Book {pkg.name}
@@ -181,31 +181,31 @@ export default function PackagesPage() {
       </section>
 
       {/* Custom Packages Section */}
-      <section className="py-20 bg-cream-50">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-serif font-bold text-charcoal-900 mb-6">
+            <h2 className="text-4xl font-serif font-bold text-white mb-6">
               Create Your Custom Package
             </h2>
-            <p className="text-lg text-charcoal-900/70 mb-8 leading-relaxed">
+            <p className="text-lg text-gold-200 mb-8 leading-relaxed">
               Have something special in mind? We'll work with you to design a bespoke massage experience tailored to your exact needs and preferences. Perfect for special events, corporate wellness, bridal parties, and unique celebrations.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-semibold text-charcoal-900 mb-2">Corporate Events</h3>
-                <p className="text-sm text-charcoal-900/70">
+              <div className="bg-black-light border border-gold-500/20 p-6 rounded-lg shadow-lg shadow-gold-500/10">
+                <h3 className="font-semibold text-white mb-2">Corporate Events</h3>
+                <p className="text-sm text-gold-200">
                   On-site chair massage or full sessions for team wellness days
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-semibold text-charcoal-900 mb-2">Bridal Parties</h3>
-                <p className="text-sm text-charcoal-900/70">
+              <div className="bg-black-light border border-gold-500/20 p-6 rounded-lg shadow-lg shadow-gold-500/10">
+                <h3 className="font-semibold text-white mb-2">Bridal Parties</h3>
+                <p className="text-sm text-gold-200">
                   Pre-wedding relaxation for the entire wedding party
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-semibold text-charcoal-900 mb-2">Special Occasions</h3>
-                <p className="text-sm text-charcoal-900/70">
+              <div className="bg-black-light border border-gold-500/20 p-6 rounded-lg shadow-lg shadow-gold-500/10">
+                <h3 className="font-semibold text-white mb-2">Special Occasions</h3>
+                <p className="text-sm text-gold-200">
                   Birthday celebrations, retreats, or wellness weekends
                 </p>
               </div>
@@ -218,16 +218,16 @@ export default function PackagesPage() {
       </section>
 
       {/* Membership Section */}
-      <section className="py-20 bg-gradient-to-br from-gold-500 to-gold-600 text-white">
+      <section className="py-20 bg-gold-gradient text-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-serif font-bold mb-6">
               Monthly Wellness Membership
             </h2>
-            <p className="text-xl mb-6 opacity-90">
+            <p className="text-xl mb-6">
               Make self-care a regular practice with our exclusive membership program
             </p>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-8">
+            <div className="bg-black/10 backdrop-blur-sm rounded-lg p-8 mb-8">
               <ul className="space-y-3 text-left max-w-md mx-auto">
                 <li className="flex items-start">
                   <svg className="w-6 h-6 mr-2 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -258,7 +258,7 @@ export default function PackagesPage() {
             <CTAButton
               href="/contact"
               variant="outline"
-              className="bg-white text-gold-600 hover:bg-cream-100 border-white"
+              className="bg-black text-gold-400 hover:bg-black-light border-black hover:border-black-light"
             >
               Learn About Membership
             </CTAButton>
@@ -267,12 +267,12 @@ export default function PackagesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black-light">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-serif font-bold text-charcoal-900 mb-6">
+          <h2 className="text-4xl font-serif font-bold text-white mb-6">
             Ready to Experience Luxury?
           </h2>
-          <p className="text-xl text-charcoal-900/70 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gold-200 mb-8 max-w-2xl mx-auto">
             Book your package today and discover why South Florida's elite choose us for their at-home spa experiences.
           </p>
           <CTAButton href="/contact" variant="primary">

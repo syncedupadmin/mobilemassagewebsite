@@ -21,38 +21,38 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mobilemassagewebsite.vercel.app'),
-  title: "Luxury Mobile Massage at Home | Ivory & Stone",
+  title: "Luxury Mobile Massage at Home | Destiny Eden",
   description: "Spa-quality massage in the comfort of your home, hotel, or office. Certified therapists, premium oils, and luxury treatments delivered to you in South Florida.",
-  keywords: "luxury mobile massage, in-home massage South Florida, spa at home, mobile massage Delray to Miami",
+  keywords: "luxury mobile massage, in-home massage South Florida, spa at home, mobile massage Delray to Miami, Destiny Eden",
   openGraph: {
-    title: "Luxury Mobile Massage at Home | Ivory & Stone",
+    title: "Luxury Mobile Massage at Home | Destiny Eden",
     description: "Spa-quality massage in the comfort of your home, hotel, or office.",
     type: "website",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/images/destiny-eden-logo.png",
         width: 1200,
         height: 1200,
-        alt: "Ivory & Stone Mobile Massage Logo",
+        alt: "Destiny Eden Mobile Massage Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxury Mobile Massage at Home | Ivory & Stone",
+    title: "Luxury Mobile Massage at Home | Destiny Eden",
     description: "Spa-quality massage in the comfort of your home, hotel, or office.",
-    images: ["/images/logo.png"],
+    images: ["/images/destiny-eden-logo.png"],
   },
   icons: {
-    icon: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: "/images/destiny-eden-logo.png",
+    apple: "/images/destiny-eden-logo.png",
   },
 };
 
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Ivory & Stone Mobile Massage",
+  "name": "Destiny Eden Mobile Massage",
   "image": "https://yourdomain.com/logo.png",
   "@id": "",
   "url": "https://www.yourdomain.com",
