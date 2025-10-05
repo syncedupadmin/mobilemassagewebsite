@@ -99,41 +99,41 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-black-gradient">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-40 pb-32 bg-black">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl sm:text-6xl font-serif font-bold text-white mb-6">
-              Our Luxury Massage Services
+            <h1 className="text-5xl sm:text-6xl font-serif font-light text-cream mb-8 tracking-wide">
+              Massage Services
             </h1>
-            <p className="text-xl text-gold-200 leading-relaxed mb-8">
-              Whether you're seeking stress relief, recovery, or indulgence, our certified therapists bring the full spa experience to your home, hotel, or office throughout South Florida.
+            <p className="text-base text-cream/70 leading-relaxed mb-12 max-w-2xl mx-auto">
+              Certified therapists bringing spa-quality treatments to your space throughout South Florida
             </p>
             <CTAButton href="/contact" variant="primary">
-              Reserve Your Massage Today
+              Reserve
             </CTAButton>
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-black-light">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-20">
+      <section className="py-32 bg-charcoal">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="space-y-24">
             {services.map((service, index) => (
               <div
                 key={index}
                 className={`flex flex-col ${
                   index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                } gap-12 items-center`}
+                } gap-16 items-center`}
               >
                 {/* Image */}
                 <div className="w-full lg:w-1/2">
-                  <div className="relative h-96 rounded-lg overflow-hidden shadow-xl shadow-gold-500/20 border border-gold-500/20">
+                  <div className="relative h-[500px] overflow-hidden">
                     <Image
                       src={service.imageSrc}
                       alt={service.imageAlt}
                       fill
-                      className="object-cover hover:scale-105 transition-transform duration-500"
+                      className="object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       loading="lazy"
                     />
@@ -142,47 +142,47 @@ export default function ServicesPage() {
 
                 {/* Content */}
                 <div className="w-full lg:w-1/2">
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <div className="inline-block px-4 py-1 bg-gold-500/20 border border-gold-500 text-gold-400 text-sm font-medium rounded-full">
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    <div className="px-4 py-1 bg-gold-300/10 border-l-2 border-gold-300 text-gold-300 text-xs font-medium tracking-wide">
                       {service.duration}
                     </div>
                     {service.pricing && (
-                      <div className="inline-block px-4 py-1 bg-gold-500/20 border border-gold-500 text-gold-400 text-sm font-medium rounded-full">
+                      <div className="px-4 py-1 bg-gold-300/10 border-l-2 border-gold-300 text-gold-300 text-xs font-medium tracking-wide">
                         {service.pricing}
                       </div>
                     )}
                   </div>
-                  <h2 className="text-4xl font-serif font-bold text-white mb-4">
+                  <h2 className="text-4xl font-serif font-light text-cream mb-6 tracking-wide">
                     {service.title}
                   </h2>
-                  <p className="text-lg text-gold-200 mb-6 leading-relaxed">
+                  <p className="text-base text-cream/80 mb-8 leading-relaxed">
                     {service.description}
                   </p>
-                  <div className="mb-6">
-                    <h3 className="text-xl font-semibold text-gold-400 mb-3">
-                      Benefits:
+                  <div className="mb-8">
+                    <h3 className="text-sm font-medium text-gold-300 mb-4 tracking-wide uppercase">
+                      Benefits
                     </h3>
-                    <ul className="space-y-2">
+                    <ul className="space-y-3">
                       {service.benefits.map((benefit, i) => (
                         <li key={i} className="flex items-start">
                           <svg
-                            className="w-6 h-6 text-gold-400 mr-2 flex-shrink-0"
+                            className="w-5 h-5 text-gold-300 mr-3 flex-shrink-0 mt-0.5"
                             fill="none"
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            strokeWidth="2"
+                            strokeWidth="1.5"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
                           >
                             <path d="M5 13l4 4L19 7"></path>
                           </svg>
-                          <span className="text-gold-200">{benefit}</span>
+                          <span className="text-cream/70 text-sm">{benefit}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   <CTAButton href="/contact" variant="secondary">
-                    Book {service.title}
+                    Book
                   </CTAButton>
                 </div>
               </div>
@@ -192,57 +192,57 @@ export default function ServicesPage() {
       </section>
 
       {/* Add-Ons Section */}
-      <section className="py-20 bg-black">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-serif font-bold text-white mb-4">
-              Enhance Your Experience
+      <section className="py-32 bg-black">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-serif font-light text-cream mb-6 tracking-wide">
+              Enhancements
             </h2>
-            <p className="text-lg text-gold-200 max-w-2xl mx-auto">
-              Add these luxurious enhancements to any massage service
+            <p className="text-base text-cream/70 max-w-xl mx-auto">
+              Available additions for any treatment
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-black border border-gold-500/20 p-8 rounded-lg shadow-lg shadow-gold-500/10 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-500/20 border-2 border-gold-500 mb-4">
-                <svg className="w-8 h-8 text-gold-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+            <div className="bg-charcoal border-l-2 border-gold-300/30 p-10 text-center">
+              <div className="w-12 h-12 mx-auto mb-6 text-gold-300">
+                <svg fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-serif font-semibold text-white mb-2">
+              <h3 className="text-lg font-serif font-medium text-cream mb-3 tracking-wide">
                 Aromatherapy
               </h3>
-              <p className="text-gold-200">
-                Premium essential oil blends tailored to your mood
+              <p className="text-cream/70 text-sm">
+                Essential oil blends tailored to your needs
               </p>
             </div>
 
-            <div className="bg-black border border-gold-500/20 p-8 rounded-lg shadow-lg shadow-gold-500/10 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-500/20 border-2 border-gold-500 mb-4">
-                <svg className="w-8 h-8 text-gold-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="bg-charcoal border-l-2 border-gold-300/30 p-10 text-center">
+              <div className="w-12 h-12 mx-auto mb-6 text-gold-300">
+                <svg fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-serif font-semibold text-white mb-2">
-                CBD Oil Treatment
+              <h3 className="text-lg font-serif font-medium text-cream mb-3 tracking-wide">
+                CBD Oil
               </h3>
-              <p className="text-gold-200">
-                Deep relief with therapeutic CBD-infused massage oil
+              <p className="text-cream/70 text-sm">
+                Therapeutic CBD-infused treatment
               </p>
             </div>
 
-            <div className="bg-black border border-gold-500/20 p-8 rounded-lg shadow-lg shadow-gold-500/10 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-500/20 border-2 border-gold-500 mb-4">
-                <svg className="w-8 h-8 text-gold-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="bg-charcoal border-l-2 border-gold-300/30 p-10 text-center">
+              <div className="w-12 h-12 mx-auto mb-6 text-gold-300">
+                <svg fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-serif font-semibold text-white mb-2">
+              <h3 className="text-lg font-serif font-medium text-cream mb-3 tracking-wide">
                 Extended Time
               </h3>
-              <p className="text-gold-200">
-                Add 30 minutes for deeper relaxation and focus
+              <p className="text-cream/70 text-sm">
+                Additional 30 minutes of focused work
               </p>
             </div>
           </div>
@@ -250,16 +250,16 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gold-gradient text-black">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-serif font-bold mb-6">
-            Experience Luxury in Your Space
+      <section className="py-32 bg-charcoal">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 text-center">
+          <h2 className="text-4xl sm:text-5xl font-serif font-light text-cream mb-8 tracking-wide">
+            Reserve Your Session
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Serving South Florida from Delray Beach to Miami. Book your in-home massage experience today.
+          <p className="text-base text-cream/70 mb-12 max-w-lg mx-auto">
+            Delray Beach to Miami
           </p>
-          <CTAButton href="/contact" variant="outline" className="bg-black text-gold-400 hover:bg-black-light border-black hover:border-black-light">
-            Schedule Your Session
+          <CTAButton href="/contact" variant="primary">
+            Book Now
           </CTAButton>
         </div>
       </section>

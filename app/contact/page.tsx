@@ -12,25 +12,25 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-12 bg-black-gradient">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-40 pb-20 bg-black">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl sm:text-6xl font-serif font-bold text-white mb-6">
-              Book Your Massage Today
+            <h1 className="text-5xl sm:text-6xl font-serif font-light text-cream mb-8 tracking-wide">
+              Schedule Your Session
             </h1>
-            <p className="text-xl text-gold-200 leading-relaxed mb-4">
-              Your escape from stress is just one click away. Select your preferred service, date, and time below, and we'll bring the luxury spa experience directly to you.
+            <p className="text-base text-cream/70 leading-relaxed mb-4 max-w-2xl mx-auto">
+              Select your service and preferred time
             </p>
-            <p className="text-lg text-gold-400 font-semibold">
-              Serving South Florida from Delray Beach to Miami
+            <p className="text-sm text-gold-300 tracking-wide">
+              Delray Beach to Miami
             </p>
           </div>
         </div>
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-12 bg-black-light">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-charcoal">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="max-w-3xl mx-auto">
             <ContactForm />
           </div>
@@ -38,14 +38,14 @@ export default function ContactPage() {
       </section>
 
       {/* Booking Calendar Section */}
-      <section className="py-12 bg-black">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-serif font-bold text-white mb-4">
-              Or Book Directly
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-serif font-light text-cream mb-6 tracking-wide">
+              Direct Booking
             </h2>
-            <p className="text-lg text-gold-200">
-              Use our online booking system to schedule your appointment
+            <p className="text-base text-cream/70">
+              Schedule your appointment online
             </p>
           </div>
           <div className="max-w-5xl mx-auto">
@@ -55,68 +55,68 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Info Section */}
-      <section className="py-16 bg-black-light">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-32 bg-charcoal">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-serif font-bold text-white mb-4">
-                Prefer to Talk?
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-serif font-light text-cream mb-6 tracking-wide">
+                Get in Touch
               </h2>
-              <p className="text-lg text-gold-200">
-                We're here to answer questions and help you choose the perfect service
+              <p className="text-base text-cream/70">
+                Questions about our services?
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {/* Phone */}
-              <div className="text-center bg-black border border-gold-500/20 p-8 rounded-lg shadow-lg shadow-gold-500/10">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-500/20 border-2 border-gold-500 text-gold-400 mb-4">
-                  <svg className="w-8 h-8" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="text-center bg-black border-l-2 border-gold-300/30 p-10">
+                <div className="w-12 h-12 mx-auto mb-6 text-gold-300">
+                  <svg fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+                <h3 className="text-lg font-medium text-cream mb-3 tracking-wide">Phone</h3>
                 <a
                   href="tel:+15615551234"
-                  className="text-gold-400 hover:text-gold-300 font-medium text-lg"
+                  className="text-gold-300 hover:text-gold-400 text-base"
                 >
                   (561) 555-1234
                 </a>
-                <p className="text-sm text-gold-300 mt-2">Mon-Sun: 8am-10pm</p>
+                <p className="text-xs text-cream/60 mt-3">8am-10pm Daily</p>
               </div>
 
               {/* Email */}
-              <div className="text-center bg-black border border-gold-500/20 p-8 rounded-lg shadow-lg shadow-gold-500/10">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-500/20 border-2 border-gold-500 text-gold-400 mb-4">
-                  <svg className="w-8 h-8" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="text-center bg-black border-l-2 border-gold-300/30 p-10">
+                <div className="w-12 h-12 mx-auto mb-6 text-gold-300">
+                  <svg fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+                <h3 className="text-lg font-medium text-cream mb-3 tracking-wide">Email</h3>
                 <a
                   href="mailto:info@yourbrand.com"
-                  className="text-gold-400 hover:text-gold-300 font-medium break-all"
+                  className="text-gold-300 hover:text-gold-400 text-base break-all"
                 >
                   info@yourbrand.com
                 </a>
-                <p className="text-sm text-gold-300 mt-2">24-hour response time</p>
+                <p className="text-xs text-cream/60 mt-3">24hr Response</p>
               </div>
 
               {/* Text */}
-              <div className="text-center bg-black border border-gold-500/20 p-8 rounded-lg shadow-lg shadow-gold-500/10">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-500/20 border-2 border-gold-500 text-gold-400 mb-4">
-                  <svg className="w-8 h-8" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="text-center bg-black border-l-2 border-gold-300/30 p-10">
+                <div className="w-12 h-12 mx-auto mb-6 text-gold-300">
+                  <svg fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Text Us</h3>
+                <h3 className="text-lg font-medium text-cream mb-3 tracking-wide">Text</h3>
                 <a
                   href="sms:+15615551234"
-                  className="text-gold-400 hover:text-gold-300 font-medium text-lg"
+                  className="text-gold-300 hover:text-gold-400 text-base"
                 >
                   (561) 555-1234
                 </a>
-                <p className="text-sm text-gold-300 mt-2">Fast replies</p>
+                <p className="text-xs text-cream/60 mt-3">Quick Replies</p>
               </div>
             </div>
           </div>

@@ -72,24 +72,24 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-black-gradient">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-40 pb-32 bg-black">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl sm:text-6xl font-serif font-bold text-white mb-6">
-              Where Luxury Meets Convenience
+            <h1 className="text-5xl sm:text-6xl font-serif font-light text-cream mb-8 tracking-wide">
+              About Destiny Eden
             </h1>
-            <p className="text-xl text-gold-200 leading-relaxed">
-              At <span className="text-gold-400 font-semibold">Destiny Eden</span>, we believe wellness should be effortless. Our certified therapists bring years of spa experience directly to your home, hotel, or office. Every detail—from premium oils to discreet service—creates your personal sanctuary.
+            <p className="text-base text-cream/70 leading-relaxed max-w-2xl mx-auto">
+              Certified therapists delivering spa-quality treatments with discretion and care
             </p>
           </div>
         </div>
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-black-light">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 lg:h-[600px] rounded-lg overflow-hidden shadow-2xl shadow-gold-500/20 border border-gold-500/20">
+      <section className="py-32 bg-charcoal">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative h-96 lg:h-[600px] overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80"
                 alt="Luxury massage therapy"
@@ -99,21 +99,21 @@ export default function AboutPage() {
             </div>
 
             <div>
-              <h2 className="text-4xl font-serif font-bold text-white mb-6">
+              <h2 className="text-4xl font-serif font-light text-cream mb-8 tracking-wide">
                 Our Story
               </h2>
-              <div className="space-y-4 text-gold-200 leading-relaxed">
+              <div className="space-y-6 text-cream/80 leading-relaxed text-sm">
                 <p>
-                  Founded in 2020, Destiny Eden was born from a simple observation: the most successful people in South Florida were too busy to prioritize their wellness. They needed the luxury spa experience but couldn't spare the time for travel and waiting rooms.
+                  Founded in 2020, Destiny Eden was born from a simple observation: the most successful people in South Florida were too busy to prioritize their wellness.
                 </p>
                 <p>
-                  We assembled a team of elite therapists—professionals who'd worked at the region's most prestigious spas and resorts—and created a mobile service that delivers that same five-star experience wherever our clients are most comfortable.
+                  We assembled a team of elite therapists—professionals from the region's most prestigious spas—and created a mobile service delivering five-star experiences wherever clients are most comfortable.
                 </p>
                 <p>
-                  Today, we serve everyone from Fortune 500 executives to busy parents, professional athletes to couples celebrating anniversaries. What they all have in common is a desire for exceptional service, total convenience, and genuine results.
+                  Today, we serve Fortune 500 executives, busy parents, professional athletes, and couples celebrating life's moments.
                 </p>
-                <p className="text-gold-400 font-semibold italic">
-                  Your wellness journey shouldn't require compromise. We bring the sanctuary to you.
+                <p className="text-gold-300 font-medium">
+                  We bring the sanctuary to you.
                 </p>
               </div>
             </div>
@@ -122,27 +122,27 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-black">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold text-white mb-4">
-              Our Commitment to Excellence
+      <section className="py-32 bg-black">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-serif font-light text-cream mb-6 tracking-wide">
+              Our Approach
             </h2>
-            <p className="text-lg text-gold-200 max-w-2xl mx-auto">
-              Three core principles guide everything we do
+            <p className="text-base text-cream/70 max-w-xl mx-auto">
+              Core principles guiding our work
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-5xl mx-auto">
             {values.map((value, index) => (
-              <div key={index} className="bg-black-light border border-gold-500/20 p-8 rounded-lg shadow-lg shadow-gold-500/10">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-500/20 border-2 border-gold-500 text-gold-400 mb-6">
+              <div key={index} className="text-center">
+                <div className="w-12 h-12 mx-auto mb-6 text-gold-300">
                   {value.icon}
                 </div>
-                <h3 className="text-2xl font-serif font-semibold text-white mb-3">
+                <h3 className="text-xl font-serif font-medium text-cream mb-4 tracking-wide">
                   {value.title}
                 </h3>
-                <p className="text-gold-200 leading-relaxed">
+                <p className="text-cream/70 text-sm leading-relaxed">
                   {value.description}
                 </p>
               </div>

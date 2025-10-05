@@ -87,91 +87,91 @@ export default function PackagesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-black-gradient">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-40 pb-32 bg-black">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl sm:text-6xl font-serif font-bold text-white mb-6">
-              Luxury Packages for Every Occasion
+            <h1 className="text-5xl sm:text-6xl font-serif font-light text-cream mb-8 tracking-wide">
+              Curated Packages
             </h1>
-            <p className="text-xl text-gold-200 leading-relaxed mb-8">
-              Curated massage experiences designed to deliver maximum relaxation, recovery, and rejuvenation. Each package includes premium enhancements for an unforgettable spa experience at home.
+            <p className="text-base text-cream/70 leading-relaxed mb-8 max-w-2xl mx-auto">
+              Complete experiences designed for relaxation, recovery, and special occasions
             </p>
           </div>
         </div>
       </section>
 
       {/* Packages Grid */}
-      <section className="py-20 bg-black-light">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="py-32 bg-charcoal">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {packages.map((pkg, index) => (
               <div
                 key={index}
-                className="group bg-black border border-gold-500/20 rounded-xl overflow-hidden shadow-lg shadow-gold-500/10 hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-500 transform hover:-translate-y-2"
+                className="bg-black-light border-l-2 border-gold-300/30 overflow-hidden"
               >
                 {/* Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-80 overflow-hidden">
                   <Image
                     src={pkg.imageSrc}
                     alt={pkg.imageAlt}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <div className="inline-block px-3 py-1 bg-gold-gradient text-black text-sm font-semibold rounded-full mb-2">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="px-3 py-1 bg-gold-300/10 border-l-2 border-gold-300 text-gold-300 text-xs font-medium tracking-wide mb-3 inline-block">
                       {pkg.duration}
                     </div>
-                    <h2 className="text-3xl font-serif font-bold text-white">
+                    <h2 className="text-3xl font-serif font-light text-cream tracking-wide">
                       {pkg.name}
                     </h2>
-                    <p className="text-gold-400 font-medium italic">
+                    <p className="text-gold-300 font-medium text-sm mt-1">
                       {pkg.tagline}
                     </p>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-8">
-                  <p className="text-gold-200 mb-6 leading-relaxed">
+                <div className="p-10">
+                  <p className="text-cream/80 mb-8 leading-relaxed text-sm">
                     {pkg.description}
                   </p>
 
-                  <div className="mb-6">
-                    <h3 className="text-lg font-semibold text-gold-400 mb-3">
-                      Package Includes:
+                  <div className="mb-8">
+                    <h3 className="text-xs font-medium text-gold-300 mb-4 tracking-wide uppercase">
+                      Includes
                     </h3>
-                    <ul className="space-y-2">
+                    <ul className="space-y-3">
                       {pkg.includes.map((item, i) => (
                         <li key={i} className="flex items-start">
                           <svg
-                            className="w-5 h-5 text-gold-400 mr-2 flex-shrink-0 mt-0.5"
+                            className="w-4 h-4 text-gold-300 mr-3 flex-shrink-0 mt-0.5"
                             fill="none"
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            strokeWidth="2"
+                            strokeWidth="1.5"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
                           >
                             <path d="M5 13l4 4L19 7"></path>
                           </svg>
-                          <span className="text-gold-200 text-sm">{item}</span>
+                          <span className="text-cream/70 text-xs">{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="mb-6 p-4 bg-black-light border border-gold-500/20 rounded-lg">
-                    <p className="text-sm text-gold-300 mb-1">Ideal For:</p>
-                    <p className="text-white font-medium">{pkg.idealFor}</p>
+                  <div className="mb-8 p-5 bg-charcoal border-l-2 border-gold-300/30">
+                    <p className="text-xs text-gold-300 mb-2 tracking-wide uppercase">Ideal For</p>
+                    <p className="text-cream text-sm">{pkg.idealFor}</p>
                   </div>
 
                   <CTAButton
                     href="/contact"
-                    variant="primary"
+                    variant="secondary"
                     className="w-full"
                   >
-                    Book {pkg.name}
+                    Reserve
                   </CTAButton>
                 </div>
               </div>
@@ -181,102 +181,101 @@ export default function PackagesPage() {
       </section>
 
       {/* Custom Packages Section */}
-      <section className="py-20 bg-black">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-32 bg-black">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-serif font-bold text-white mb-6">
-              Create Your Custom Package
+            <h2 className="text-4xl font-serif font-light text-cream mb-8 tracking-wide">
+              Custom Experiences
             </h2>
-            <p className="text-lg text-gold-200 mb-8 leading-relaxed">
-              Have something special in mind? We'll work with you to design a bespoke massage experience tailored to your exact needs and preferences. Perfect for special events, corporate wellness, bridal parties, and unique celebrations.
+            <p className="text-base text-cream/70 mb-12 leading-relaxed max-w-2xl mx-auto">
+              Tailored treatments for special events and celebrations
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-              <div className="bg-black-light border border-gold-500/20 p-6 rounded-lg shadow-lg shadow-gold-500/10">
-                <h3 className="font-semibold text-white mb-2">Corporate Events</h3>
-                <p className="text-sm text-gold-200">
-                  On-site chair massage or full sessions for team wellness days
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="bg-charcoal border-l-2 border-gold-300/30 p-8">
+                <h3 className="font-medium text-cream mb-3 text-sm tracking-wide">Corporate</h3>
+                <p className="text-xs text-cream/70">
+                  Team wellness and on-site sessions
                 </p>
               </div>
-              <div className="bg-black-light border border-gold-500/20 p-6 rounded-lg shadow-lg shadow-gold-500/10">
-                <h3 className="font-semibold text-white mb-2">Bridal Parties</h3>
-                <p className="text-sm text-gold-200">
-                  Pre-wedding relaxation for the entire wedding party
+              <div className="bg-charcoal border-l-2 border-gold-300/30 p-8">
+                <h3 className="font-medium text-cream mb-3 text-sm tracking-wide">Weddings</h3>
+                <p className="text-xs text-cream/70">
+                  Bridal party relaxation
                 </p>
               </div>
-              <div className="bg-black-light border border-gold-500/20 p-6 rounded-lg shadow-lg shadow-gold-500/10">
-                <h3 className="font-semibold text-white mb-2">Special Occasions</h3>
-                <p className="text-sm text-gold-200">
-                  Birthday celebrations, retreats, or wellness weekends
+              <div className="bg-charcoal border-l-2 border-gold-300/30 p-8">
+                <h3 className="font-medium text-cream mb-3 text-sm tracking-wide">Celebrations</h3>
+                <p className="text-xs text-cream/70">
+                  Birthdays and special occasions
                 </p>
               </div>
             </div>
             <CTAButton href="/contact" variant="primary">
-              Inquire About Custom Packages
+              Inquire
             </CTAButton>
           </div>
         </div>
       </section>
 
       {/* Membership Section */}
-      <section className="py-20 bg-gold-gradient text-black">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-32 bg-charcoal">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-serif font-bold mb-6">
-              Monthly Wellness Membership
+            <h2 className="text-4xl font-serif font-light text-cream mb-8 tracking-wide">
+              Monthly Membership
             </h2>
-            <p className="text-xl mb-6">
-              Make self-care a regular practice with our exclusive membership program
+            <p className="text-base text-cream/70 mb-12 max-w-lg mx-auto">
+              Make wellness a regular practice
             </p>
-            <div className="bg-black/10 backdrop-blur-sm rounded-lg p-8 mb-8">
-              <ul className="space-y-3 text-left max-w-md mx-auto">
+            <div className="bg-black border-l-2 border-gold-300/30 p-10 mb-12">
+              <ul className="space-y-4 text-left max-w-md mx-auto">
                 <li className="flex items-start">
-                  <svg className="w-6 h-6 mr-2 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 mr-3 flex-shrink-0 mt-0.5 text-gold-300" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <span>Priority booking and scheduling</span>
+                  <span className="text-cream/80 text-sm">Priority booking</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-6 h-6 mr-2 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 mr-3 flex-shrink-0 mt-0.5 text-gold-300" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <span>Exclusive member pricing (save up to 20%)</span>
+                  <span className="text-cream/80 text-sm">Member pricing (up to 20% savings)</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-6 h-6 mr-2 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 mr-3 flex-shrink-0 mt-0.5 text-gold-300" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <span>Complimentary upgrades and add-ons</span>
+                  <span className="text-cream/80 text-sm">Complimentary upgrades</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-6 h-6 mr-2 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 mr-3 flex-shrink-0 mt-0.5 text-gold-300" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <span>Flexible session rollover</span>
+                  <span className="text-cream/80 text-sm">Flexible session rollover</span>
                 </li>
               </ul>
             </div>
             <CTAButton
               href="/contact"
-              variant="outline"
-              className="bg-black text-gold-400 hover:bg-black-light border-black hover:border-black-light"
+              variant="secondary"
             >
-              Learn About Membership
+              Learn More
             </CTAButton>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-black-light">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-serif font-bold text-white mb-6">
-            Ready to Experience Luxury?
+      <section className="py-32 bg-black">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 text-center">
+          <h2 className="text-4xl font-serif font-light text-cream mb-8 tracking-wide">
+            Reserve Your Package
           </h2>
-          <p className="text-xl text-gold-200 mb-8 max-w-2xl mx-auto">
-            Book your package today and discover why South Florida's elite choose us for their at-home spa experiences.
+          <p className="text-base text-cream/70 mb-12 max-w-lg mx-auto">
+            South Florida's preferred mobile spa
           </p>
           <CTAButton href="/contact" variant="primary">
-            Schedule Your Package
+            Book Now
           </CTAButton>
         </div>
       </section>
