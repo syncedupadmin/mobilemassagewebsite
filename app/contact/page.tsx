@@ -3,14 +3,73 @@ import BookingCalendar from '@/components/BookingCalendar';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Book Your Mobile Massage | Contact Ivory & Stone',
-  description: 'Schedule your luxury massage today. Fill out our quick form or call us to bring the spa to your door in South Florida.',
-  keywords: 'book in-home massage, mobile massage appointments, massage service near me',
+  title: 'Book Mobile Massage - Same Day Available | (561) 555-1234',
+  description: 'Book your mobile massage in 60 seconds. Call (561) 555-1234 or text for same-day availability. Serving Delray Beach to Miami daily 8am-10pm.',
+  keywords: 'book mobile massage, same day massage South Florida, schedule massage Miami, mobile massage booking',
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How far in advance should I book?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We recommend booking at least 48 hours in advance for optimal availability. Same-day appointments may be available—call us to check!"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do I need to prepare at home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nothing! We bring everything: massage table, linens, oils, music, and all equipment. Just provide a quiet space approximately 8x10 feet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you travel to hotels and offices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! We serve homes, hotels, resorts, offices, and special event venues throughout South Florida."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's your cancellation policy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We require 24 hours notice for cancellations or rescheduling. Late cancellations may incur a fee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We accept all major credit cards, cash, Venmo, and Zelle. Payment is collected at the time of service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are gratuities included?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gratuities are not included but always appreciated for exceptional service. Most clients tip 15-20%."
+      }
+    }
+  ]
 };
 
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative pt-40 pb-20 bg-black">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
@@ -94,12 +153,12 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-lg font-medium text-cream mb-3 tracking-wide">Email</h3>
                 <a
-                  href="mailto:info@yourbrand.com"
+                  href="mailto:info@destinyedenmobilemassage.com"
                   className="text-gold-300 hover:text-gold-400 text-base break-all"
                 >
-                  info@yourbrand.com
+                  info@destinyedenmobilemassage.com
                 </a>
-                <p className="text-xs text-cream/60 mt-3">24hr Response</p>
+                <p className="text-xs text-cream/60 mt-3">Response within 2 hours</p>
               </div>
 
               {/* Text */}

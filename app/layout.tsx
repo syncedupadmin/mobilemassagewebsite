@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,13 +21,13 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mobilemassagewebsite.vercel.app'),
-  title: "Luxury Mobile Massage at Home | Destiny Eden",
-  description: "Spa-quality massage in the comfort of your home, hotel, or office. Certified therapists, premium oils, and luxury treatments delivered to you in South Florida.",
-  keywords: "luxury mobile massage, in-home massage South Florida, spa at home, mobile massage Delray to Miami, Destiny Eden",
+  metadataBase: new URL('https://destinyedenmobilemassage.vercel.app'),
+  title: "Luxury Mobile Massage South Florida | Destiny Eden Spa",
+  description: "Award-winning mobile massage bringing 5-star spa experiences to your South Florida home, hotel, or office. Certified LMTs, organic oils, same-day available.",
+  keywords: "luxury mobile massage, in-home massage South Florida, spa at home, mobile massage Miami, mobile massage Delray Beach, mobile massage Boca Raton, Destiny Eden",
   openGraph: {
-    title: "Luxury Mobile Massage at Home | Destiny Eden",
-    description: "Spa-quality massage in the comfort of your home, hotel, or office.",
+    title: "Luxury Mobile Massage South Florida | Destiny Eden Spa",
+    description: "Award-winning mobile massage bringing 5-star spa experiences to your South Florida home, hotel, or office. Certified LMTs, organic oils, same-day available.",
     type: "website",
     images: [
       {
@@ -39,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxury Mobile Massage at Home | Destiny Eden",
-    description: "Spa-quality massage in the comfort of your home, hotel, or office.",
+    title: "Luxury Mobile Massage South Florida | Destiny Eden Spa",
+    description: "Award-winning mobile massage bringing 5-star spa experiences to your South Florida home, hotel, or office.",
     images: ["/images/destiny-eden-logo.png"],
   },
   icons: {
@@ -53,14 +54,17 @@ const schemaData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Destiny Eden Mobile Massage",
-  "image": "https://yourdomain.com/logo.png",
-  "@id": "",
-  "url": "https://www.yourdomain.com",
-  "telephone": "+1-561-XXX-XXXX",
-  "priceRange": "$$",
+  "image": "https://destinyedenmobilemassage.vercel.app/images/destiny-eden-logo.png",
+  "@id": "https://destinyedenmobilemassage.vercel.app/#organization",
+  "url": "https://destinyedenmobilemassage.vercel.app",
+  "telephone": "+1-561-555-1234",
+  "email": "info@destinyedenmobilemassage.com",
+  "priceRange": "$$-$$$",
+  "paymentAccepted": "Cash, Credit Card, Venmo, Zelle",
+  "currenciesAccepted": "USD",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Serving South Florida",
+    "streetAddress": "Mobile Service - We Come To You",
     "addressLocality": "Delray Beach",
     "addressRegion": "FL",
     "postalCode": "33444",
@@ -68,18 +72,20 @@ const schemaData = {
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "26.4615",
-    "longitude": "-80.0728"
+    "latitude": 26.4615,
+    "longitude": -80.0728
   },
-  "areaServed": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": "26.1224",
-      "longitude": "-80.1373"
-    },
-    "geoRadius": "80000"
-  },
+  "areaServed": [
+    {"@type": "City", "name": "Delray Beach, FL"},
+    {"@type": "City", "name": "Boca Raton, FL"},
+    {"@type": "City", "name": "Pompano Beach, FL"},
+    {"@type": "City", "name": "Fort Lauderdale, FL"},
+    {"@type": "City", "name": "Hollywood, FL"},
+    {"@type": "City", "name": "Aventura, FL"},
+    {"@type": "City", "name": "Miami Beach, FL"},
+    {"@type": "City", "name": "Coral Gables, FL"},
+    {"@type": "City", "name": "Downtown Miami, FL"}
+  ],
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -97,35 +103,55 @@ const schemaData = {
     }
   ],
   "sameAs": [
-    "https://www.facebook.com/[YourPage]",
-    "https://www.instagram.com/[YourPage]"
+    "https://www.facebook.com/destinyedenmassage",
+    "https://www.instagram.com/destinyedenspa"
   ],
-  "serviceOffer": [
-    {
-      "@type": "Service",
-      "name": "Swedish Massage",
-      "description": "Gentle, flowing strokes to release tension and restore balance.",
-      "areaServed": "South Florida from Delray Beach to Miami"
-    },
-    {
-      "@type": "Service",
-      "name": "Deep Tissue Massage",
-      "description": "Targeted therapy for athletes or chronic pain relief.",
-      "areaServed": "South Florida from Delray Beach to Miami"
-    },
-    {
-      "@type": "Service",
-      "name": "Back-to-Back Couples Massage",
-      "description": "One therapist provides sequential massages for both partners in your home or hotel.",
-      "areaServed": "South Florida from Delray Beach to Miami"
-    },
-    {
-      "@type": "Service",
-      "name": "Hot Stone Massage",
-      "description": "Smooth, heated stones to melt away stress and soothe muscles.",
-      "areaServed": "South Florida from Delray Beach to Miami"
-    }
-  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Massage Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Swedish Massage",
+          "description": "Gentle, flowing strokes to release tension and restore balance."
+        },
+        "price": "150-290",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Deep Tissue Massage",
+          "description": "Targeted therapy for athletes or chronic pain relief."
+        },
+        "price": "170-330",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Back-to-Back Couples Massage",
+          "description": "One therapist provides sequential massages for both partners."
+        },
+        "price": "320-480",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Hot Stone Massage",
+          "description": "Smooth, heated stones to melt away stress and soothe muscles."
+        },
+        "price": "185-355",
+        "priceCurrency": "USD"
+      }
+    ]
+  },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
@@ -189,6 +215,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <BackToTop />
+        <StickyMobileCTA />
         <Analytics />
       </body>
     </html>

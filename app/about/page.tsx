@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import CTAButton from '@/components/CTAButton';
+import CertificationBadges from '@/components/CertificationBadges';
 
 export const metadata: Metadata = {
-  title: 'About Us | Luxury Mobile Massage Specialists',
-  description: 'Learn more about Ivory & Stone, certified therapists delivering high-end spa experiences directly to you in South Florida.',
-  keywords: 'professional mobile spa, certified massage therapists, luxury massage service',
+  title: 'Certified Mobile Massage Therapists | Destiny Eden Story',
+  description: 'Meet our certified massage therapists with 15+ years luxury spa experience. Licensed, insured, background-checked. Serving South Florida since 2020.',
+  keywords: 'certified massage therapists South Florida, licensed LMT Miami, professional mobile spa, Destiny Eden massage',
 };
 
 export default function AboutPage() {
@@ -193,39 +194,7 @@ export default function AboutPage() {
       </section>
 
       {/* Certifications Section */}
-      <section className="py-20 bg-black">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-serif font-bold text-white mb-4">
-                Certifications & Standards
-              </h2>
-              <p className="text-lg text-gold-200">
-                Every therapist on our team meets the highest professional standards
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {certifications.map((cert, index) => (
-                <div key={index} className="flex items-center bg-black-light border border-gold-500/20 p-4 rounded-lg shadow-lg shadow-gold-500/10">
-                  <svg
-                    className="w-6 h-6 text-gold-400 mr-4 flex-shrink-0"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                  <span className="text-white font-medium">{cert}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <CertificationBadges />
 
       {/* Service Area Section */}
       <section className="py-20 bg-black-light">

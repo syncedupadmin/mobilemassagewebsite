@@ -66,18 +66,18 @@ export default function Home() {
 
         <div className="relative z-10 text-center px-6 sm:px-8 lg:px-12 max-w-6xl mx-auto">
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-serif font-light text-cream mb-8 animate-fade-in tracking-wide">
-            Luxury Massage<br />
-            <span className="text-gold-300 font-normal">At Your Door</span>
+            South Florida's Premier<br />
+            <span className="text-gold-300 font-normal">Mobile Spa Experience</span>
           </h1>
           <p className="text-lg sm:text-xl text-cream/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Certified therapists. Premium oils. Your sanctuary.
+            Certified therapists. Five-star rituals. Complete sanctuary.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <CTAButton href="/contact" variant="primary">
-              Reserve
+              Begin Your Journey
             </CTAButton>
             <CTAButton href="/services" variant="outline">
-              Services
+              View Our Rituals
             </CTAButton>
           </div>
         </div>

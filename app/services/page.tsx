@@ -3,18 +3,18 @@ import Image from 'next/image';
 import CTAButton from '@/components/CTAButton';
 
 export const metadata: Metadata = {
-  title: 'In-Home Massage Services | Luxury Mobile Spa Treatments',
-  description: 'Explore Swedish, Deep Tissue, Back-to-Back Couples, and Hot Stone massage. Book your private in-home spa experience today in South Florida.',
-  keywords: 'Swedish massage at home, deep tissue massage near me, back to back couples massage, sequential couples massage at home, hot stone massage service',
+  title: 'In-Home Massage Services Miami to Delray | Destiny Eden',
+  description: 'Swedish, deep tissue, couples & hot stone massage at home. Licensed therapists serving Miami, Boca, Fort Lauderdale. Book your in-home spa today.',
+  keywords: 'Swedish massage at home, deep tissue massage Miami, back to back couples massage, mobile massage South Florida, hot stone massage Boca Raton',
 };
 
 export default function ServicesPage() {
   const services = [
     {
-      title: 'Swedish Massage',
+      title: 'The Art of Swedish Relaxation',
       duration: '60 / 90 / 120 minutes',
-      pricing: '$XXX / $XXX / $XXX',
-      description: 'Experience the classic relaxation massage with gentle, flowing strokes designed to release tension and restore balance. Perfect for stress relief and improving circulation.',
+      pricing: '$150 / $220 / $290',
+      description: 'Long, flowing strokes melt tension from head to toe. Our certified therapists customize pressure and technique to your body\'s unique needs. Aromatherapy included. Perfect for first-time guests seeking deep calm.',
       benefits: [
         'Reduces stress and anxiety',
         'Improves blood circulation',
@@ -25,10 +25,10 @@ export default function ServicesPage() {
       imageAlt: 'Swedish Massage Therapy',
     },
     {
-      title: 'Deep Tissue Massage',
+      title: 'Therapeutic Deep Tissue Therapy',
       duration: '60 / 90 / 120 minutes',
-      pricing: '$XXX / $XXX / $XXX',
-      description: 'Targeted therapy using firm pressure to reach deeper muscle layers. Ideal for athletes, chronic pain sufferers, or anyone with persistent muscle tension and knots.',
+      pricing: '$170 / $250 / $330',
+      description: 'Targeted relief for chronic tension and athletic recovery. Our advanced techniques reach deep muscle layers, releasing years of stress. Ideal for executives, athletes, and active professionals.',
       benefits: [
         'Relieves chronic muscle pain',
         'Breaks up scar tissue',
@@ -39,10 +39,10 @@ export default function ServicesPage() {
       imageAlt: 'Deep Tissue Massage',
     },
     {
-      title: 'Back-to-Back Couples Massage',
+      title: 'Intimate Back-to-Back Couples Experience',
       duration: '120 min / 180 min (for both partners)',
-      pricing: '$XXX / $XXX (total for both)',
-      description: 'Share the luxury spa experience with someone special. One skilled therapist provides consecutive massage sessions for both partners in the comfort of your home or hotel. Each person receives individual attention and a fully customized massage. Perfect for anniversaries, celebrations, or romantic relaxation.',
+      pricing: '$320 / $480 (total for both)',
+      description: 'One master therapist. Two transformative sessions. Complete privacy. Celebrate anniversaries, reconnect, or simply escape together—without leaving your sanctuary.',
       benefits: [
         'Personalized attention for each partner',
         'Romantic shared experience',
@@ -55,7 +55,7 @@ export default function ServicesPage() {
     {
       title: 'Hot Stone Massage',
       duration: '75 / 90 / 120 minutes',
-      pricing: '$XXX / $XXX / $XXX',
+      pricing: '$185 / $270 / $355',
       description: 'Smooth, heated basalt stones are placed on key points and used as massage tools to melt away tension. The therapeutic heat penetrates deep into muscles for profound relaxation.',
       benefits: [
         'Deep muscle relaxation',
@@ -69,7 +69,7 @@ export default function ServicesPage() {
     {
       title: 'Prenatal Massage',
       duration: '60 / 90 minutes',
-      pricing: '$XXX / $XXX',
+      pricing: '$160 / $235',
       description: 'Specially designed for expectant mothers, our prenatal massage eases pregnancy-related discomfort with safe, nurturing techniques. Our therapists are trained in prenatal care.',
       benefits: [
         'Reduces pregnancy discomfort',
@@ -83,7 +83,7 @@ export default function ServicesPage() {
     {
       title: 'Sports Massage',
       duration: '60 / 90 / 120 minutes',
-      pricing: '$XXX / $XXX / $XXX',
+      pricing: '$170 / $250 / $330',
       description: 'Performance-focused therapy designed for athletes before or after events. Combines stretching, compression, and targeted work to enhance performance and speed recovery.',
       benefits: [
         'Prevents injuries',

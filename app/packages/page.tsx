@@ -3,9 +3,9 @@ import Image from 'next/image';
 import CTAButton from '@/components/CTAButton';
 
 export const metadata: Metadata = {
-  title: 'Luxury Massage Packages | Exclusive In-Home Spa Experiences',
-  description: 'Discover curated massage bundles designed for romance, stress relief, and recovery. Luxury massage packages at home in South Florida.',
-  keywords: 'luxury massage packages, back to back couples massage at home, sequential couples massage, athlete recovery massage, executive stress relief',
+  title: 'Spa Package Deals & Couples Massage | Destiny Eden FL',
+  description: 'Curated massage packages for executives, couples & athletes. Monthly memberships with priority booking. South Florida\'s premier mobile spa experience.',
+  keywords: 'luxury massage packages, couples massage South Florida, executive massage packages, athlete recovery massage, mobile spa membership',
 };
 
 export default function PackagesPage() {
