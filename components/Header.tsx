@@ -57,7 +57,7 @@ export default function Header() {
               height={240}
               priority
               className={`w-auto transition-all duration-300 ${
-                isScrolled ? 'h-12 md:h-14' : 'h-14 md:h-16'
+                isScrolled ? 'h-16 md:h-20' : 'h-20 md:h-24'
               }`}
             />
           </Link>
