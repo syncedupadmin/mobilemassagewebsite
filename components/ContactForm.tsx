@@ -30,18 +30,17 @@ export default function ContactForm() {
     setError(null);
 
     try {
-      // Log form data to console for now
-      console.log('Form submitted:', data);
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
 
-      // Simulate API call delay
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const result = await response.json();
 
-      // In production, you would send this to your email service API:
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(data),
-      // });
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send message');
+      }
 
       setIsSubmitted(true);
       reset();
