@@ -1,7 +1,7 @@
-import { Resend } from 'resend';
+import sgMail from '@sendgrid/mail';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+sgMail.setApiKey(process.env.RESEND_API_KEY || '');
 
 interface ContactFormData {
   name: string;
@@ -55,23 +55,15 @@ ${message ? `Message: ${message}` : ''}
 This message was sent from the Destiny Eden Mobile Massage website contact form.
     `;
 
-    // Send email to business owner
-    const { error } = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || 'Destiny Eden <onboarding@resend.dev>',
-      to: process.env.RESEND_TO_EMAIL || 'delivered@resend.dev',
+    // Send email via SendGrid
+    await sgMail.send({
+      from: process.env.RESEND_FROM_EMAIL || 'noreply@example.com',
+      to: process.env.RESEND_TO_EMAIL || 'test@example.com',
       replyTo: email,
       subject: `New Booking Request: ${service} - ${name}`,
       html: emailHtml,
       text: emailText,
     });
-
-    if (error) {
-      console.error('Resend error:', error);
-      return NextResponse.json(
-        { error: 'Failed to send email' },
-        { status: 500 }
-      );
-    }
 
     return NextResponse.json(
       { success: true, message: 'Email sent successfully' },
@@ -80,7 +72,7 @@ This message was sent from the Destiny Eden Mobile Massage website contact form.
   } catch (error) {
     console.error('Contact form error:', error);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Failed to send email' },
       { status: 500 }
     );
   }
