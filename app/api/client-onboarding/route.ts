@@ -24,9 +24,15 @@ interface OnboardingData {
   ownerBio: string;
   businessHistory: string;
   uniqueSellingPoints: string;
+  licenseNumber: string;
+  certifications: string;
+  insurance: string;
+  yearsExperience: string;
   operatingHours: string;
   serviceLocation: string;
   serviceAreas: string;
+  travelFee: string;
+  paymentMethods: string;
   cancellationPolicy: string;
   bookingConfirmation: string;
   reminderSchedule: string;
@@ -35,6 +41,7 @@ interface OnboardingData {
   facebook: string;
   otherSocial: string;
   reviewPlatform: string;
+  testimonials: string;
   hasLegalDocs: string;
   legalDocUrls: string;
   signature: string;
@@ -125,12 +132,23 @@ export async function POST(request: Request) {
             <p style="background: #fff; padding: 15px; border-left: 3px solid #d4af37;">${data.uniqueSellingPoints || 'Not provided'}</p>
           </div>
 
+          <!-- Credentials -->
+          <h2 style="color: #333; border-bottom: 2px solid #d4af37; padding-bottom: 10px;">Credentials & Licensing</h2>
+          <table style="width: 100%; margin-bottom: 20px;">
+            <tr><td style="padding: 8px 0;"><strong>License Number (LMT):</strong></td><td>${data.licenseNumber || 'Not provided'}</td></tr>
+            <tr><td style="padding: 8px 0;"><strong>Years of Experience:</strong></td><td>${data.yearsExperience || 'Not specified'}</td></tr>
+            <tr><td style="padding: 8px 0;"><strong>Certifications:</strong></td><td>${data.certifications || 'Not provided'}</td></tr>
+            <tr><td style="padding: 8px 0;"><strong>Insurance:</strong></td><td>${data.insurance || 'Not provided'}</td></tr>
+          </table>
+
           <!-- Operations -->
           <h2 style="color: #333; border-bottom: 2px solid #d4af37; padding-bottom: 10px;">Operations</h2>
           <table style="width: 100%; margin-bottom: 20px;">
             <tr><td style="padding: 8px 0;"><strong>Operating Hours:</strong></td><td>${data.operatingHours || 'Not specified'}</td></tr>
             <tr><td style="padding: 8px 0;"><strong>Service Location:</strong></td><td>${data.serviceLocation}</td></tr>
             <tr><td style="padding: 8px 0;"><strong>Service Areas:</strong></td><td>${data.serviceAreas || 'Not specified'}</td></tr>
+            <tr><td style="padding: 8px 0;"><strong>Travel Fee:</strong></td><td>${data.travelFee || 'Not specified'}</td></tr>
+            <tr><td style="padding: 8px 0;"><strong>Payment Methods:</strong></td><td>${data.paymentMethods || 'Not specified'}</td></tr>
             <tr><td style="padding: 8px 0;"><strong>Cancellation Policy:</strong></td><td>${data.cancellationPolicy || 'Not specified'}</td></tr>
           </table>
 
@@ -150,6 +168,11 @@ export async function POST(request: Request) {
             <tr><td style="padding: 8px 0;"><strong>Other Social:</strong></td><td>${data.otherSocial || 'Not provided'}</td></tr>
             <tr><td style="padding: 8px 0;"><strong>Review Platform:</strong></td><td>${data.reviewPlatform || 'Not provided'}</td></tr>
           </table>
+
+          ${data.testimonials ? `
+          <h3 style="color: #333; margin-top: 20px;">Testimonials to Feature</h3>
+          <p style="background: #fff; padding: 15px; border-left: 3px solid #d4af37; white-space: pre-wrap;">${data.testimonials}</p>
+          ` : ''}
 
           <!-- Legal -->
           <h2 style="color: #333; border-bottom: 2px solid #d4af37; padding-bottom: 10px;">Legal & Additional</h2>
@@ -210,11 +233,20 @@ Owner Bio: ${data.ownerBio || 'Not provided'}
 Business History: ${data.businessHistory || 'Not provided'}
 Unique Selling Points: ${data.uniqueSellingPoints || 'Not provided'}
 
+Credentials & Licensing
+-----------------------
+License Number (LMT): ${data.licenseNumber || 'Not provided'}
+Years of Experience: ${data.yearsExperience || 'Not specified'}
+Certifications: ${data.certifications || 'Not provided'}
+Insurance: ${data.insurance || 'Not provided'}
+
 Operations
 ----------
 Operating Hours: ${data.operatingHours || 'Not specified'}
 Service Location: ${data.serviceLocation}
 Service Areas: ${data.serviceAreas || 'Not specified'}
+Travel Fee: ${data.travelFee || 'Not specified'}
+Payment Methods: ${data.paymentMethods || 'Not specified'}
 Cancellation Policy: ${data.cancellationPolicy || 'Not specified'}
 
 Messaging Preferences
@@ -229,6 +261,10 @@ Instagram: ${data.instagram || 'Not provided'}
 Facebook: ${data.facebook || 'Not provided'}
 Other Social: ${data.otherSocial || 'Not provided'}
 Review Platform: ${data.reviewPlatform || 'Not provided'}
+
+Testimonials
+------------
+${data.testimonials || 'None provided'}
 
 Legal
 -----
